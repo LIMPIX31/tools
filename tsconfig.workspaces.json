@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@lmpx/yarn-plugin-tspace": [
+        "yarn/plugin-tspace"
+      ]
+    }
+  }
+}
