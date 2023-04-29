@@ -25,9 +25,9 @@ export class TspaceCommand extends BaseCommand {
               await writeFile(tspacePath, JSON.stringify(defaultConfig, null, 2))
             }
 
-            const tsworkspaces = await readFile(tspacePath).then(result => JSON.parse(result.toString()))
+            const tsworkspaces = await readFile(tspacePath, 'utf8').then(JSON.parse)
 
-            tsworkspaces.compilerOptions.paths ??= {}
+            tsworkspaces.compilerOptions.paths = {}
             const paths = tsworkspaces.compilerOptions.paths
 
             project.workspaces.filter(ws => ws.cwd !== this.context.cwd).forEach(({ relativeCwd, manifest: { name } })=> {

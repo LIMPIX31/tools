@@ -14,14 +14,14 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
-      "name": "@lmpx/yarn-plugin-tspace",\
+      "name": "@yarn/yarn-plugin-tspace",\
       "reference": "workspace:yarn/plugin-tspace"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
-    ["@lmpx/yarn-plugin-tspace", ["workspace:yarn/plugin-tspace"]],\
+    ["@yarn/yarn-plugin-tspace", ["workspace:yarn/plugin-tspace"]],\
     ["tools", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -196,19 +196,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@lmpx/yarn-plugin-tspace", [\
-      ["workspace:yarn/plugin-tspace", {\
-        "packageLocation": "./yarn/plugin-tspace/",\
-        "packageDependencies": [\
-          ["@lmpx/yarn-plugin-tspace", "workspace:yarn/plugin-tspace"],\
-          ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
-          ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
-          ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
-          ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
     ["@nodelib/fs.scandir", [\
       ["npm:2.1.5", {\
         "packageLocation": "../../.yarn/berry/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-9.zip/node_modules/@nodelib/fs.scandir/",\
@@ -344,6 +331,19 @@ const RAW_RUNTIME_STATE =
           ["@types/yoga-layout", "npm:1.9.2"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@yarn/yarn-plugin-tspace", [\
+      ["workspace:yarn/plugin-tspace", {\
+        "packageLocation": "./yarn/plugin-tspace/",\
+        "packageDependencies": [\
+          ["@yarn/yarn-plugin-tspace", "workspace:yarn/plugin-tspace"],\
+          ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
+          ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
+          ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
+          ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@yarnpkg/builder", [\

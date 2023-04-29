@@ -146,20 +146,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lmpx/yarn-plugin-tspace@workspace:yarn/plugin-tspace":
-  version: 0.0.0-use.local
-  resolution: "@lmpx/yarn-plugin-tspace@workspace:yarn/plugin-tspace"
-  dependencies:
-    "@yarnpkg/builder": "npm:^4.0.0-rc.42"
-    "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
-    clipanion: "npm:^3.2.0"
-  peerDependencies:
-    "@yarnpkg/cli": ^4.0.0-rc.42
-    "@yarnpkg/core": ^4.0.0-rc.42
-  languageName: unknown
-  linkType: soft
-
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -274,6 +260,20 @@ __metadata:
   checksum: f6c8a0c3cc28b9604cc2e3a747944577f562be8dd5be46fbb522237fe52e0266c51571764322032f6d7e96d6b8f27cf51ba8e4be3024c6e68f5f173e1bd38761
   languageName: node
   linkType: hard
+
+"@yarn/yarn-plugin-tspace@workspace:yarn/plugin-tspace":
+  version: 0.0.0-use.local
+  resolution: "@yarn/yarn-plugin-tspace@workspace:yarn/plugin-tspace"
+  dependencies:
+    "@yarnpkg/builder": "npm:^4.0.0-rc.42"
+    "@yarnpkg/cli": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    clipanion: "npm:^3.2.0"
+  peerDependencies:
+    "@yarnpkg/cli": ^4.0.0-rc.42
+    "@yarnpkg/core": ^4.0.0-rc.42
+  languageName: unknown
+  linkType: soft
 
 "@yarnpkg/builder@npm:^4.0.0-rc.42":
   version: 4.0.0-rc.42
