@@ -25,9 +25,18 @@
     "sourceMap": false,
     "target": "es2022",
     "baseUrl": "./",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "noEmit": true,
     "paths": {
+      "@lmpx/cli-source-frame-component": [
+        "cli/components/source-frame"
+      ],
+      "@lmpx/cli-typescript-diagnostic-component": [
+        "cli/components/typescript-diagnostic"
+      ],
+      "@lmpx/cli-renderer": [
+        "cli/renderer"
+      ],
       "@lmpx/code-typescript": [
         "code/typescript"
       ],
@@ -50,6 +59,7 @@
   },
   "include": [
     "yarn/**/*",
-    "code/**/*"
+    "code/**/*",
+    "cli/**/*"
   ]
 }

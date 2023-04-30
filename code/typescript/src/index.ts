@@ -4,6 +4,8 @@ import { readFile } from 'node:fs/promises'
 import deepmerge from 'deepmerge'
 import { parseJsonConfigFileContent, sys, createProgram, getPreEmitDiagnostics } from 'typescript'
 
+export * from './utils'
+
 export async function check(cwd: string, include: string[] = []) {
   const tsconfigPath = join(cwd, './tsconfig.json')
 

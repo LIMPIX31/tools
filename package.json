@@ -4,7 +4,8 @@
   "private": true,
   "workspaces": [
     "yarn/**/*",
-    "code/**/*"
+    "code/**/*",
+    "cli/**/*"
   ],
   "devDependencies": {
     "husky": "^8.0.3",
