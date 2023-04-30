@@ -1,9 +1,10 @@
 {
   "name": "tools",
-  "packageManager": "yarn@4.0.0-rc.42",
+  "packageManager": "yarn@3.5.0",
   "private": true,
   "workspaces": [
-    "yarn/**/*"
+    "yarn/**/*",
+    "code/**/*"
   ],
   "devDependencies": {
     "husky": "^8.0.3",

@@ -1,9 +1,7 @@
 import { BaseCommand } from '@yarnpkg/cli'
 import { Configuration, MessageName, Project, StreamReport } from '@yarnpkg/core'
 import { readFile, writeFile } from 'node:fs/promises'
-import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import { defaultConfig } from './tspace.constants'
 
 export class TspaceCommand extends BaseCommand {
   static paths = [['tspace']]
@@ -12,7 +10,7 @@ export class TspaceCommand extends BaseCommand {
     const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
     const { project } = await Project.find(configuration, this.context.cwd)
 
-    const tspacePath = join(this.context.cwd, 'tsconfig.workspaces.json')
+    const tspacePath = join(this.context.cwd, 'tsconfig.json')
 
     const commandReport = await StreamReport.start({
         stdout: this.context.stdout,
@@ -21,10 +19,6 @@ export class TspaceCommand extends BaseCommand {
       async (report) => {
         await report.startTimerPromise('Update tsconfig workspaces', async () => {
           try {
-            if (!existsSync(tspacePath)) {
-              await writeFile(tspacePath, JSON.stringify(defaultConfig, null, 2))
-            }
-
             const tsworkspaces = await readFile(tspacePath, 'utf8').then(JSON.parse)
 
             tsworkspaces.compilerOptions.paths = {}

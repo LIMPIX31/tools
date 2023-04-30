@@ -1,0 +1,19 @@
+{
+  "name": "@lmpx/code-typescript-worker",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "vite build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@lmpx/code-typescript": "workspace:*",
+    "@lmpx/code-worker-utils": "workspace:*",
+    "flatted": "^3.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vite": "^4.3.3"
+  }
+}

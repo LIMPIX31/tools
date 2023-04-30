@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/yarn/cli/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/yarn/plugin-tspace/bundles" />
+      <excludeFolder url="file://$MODULE_DIR$/yarn/plugin-typecheck/bundles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

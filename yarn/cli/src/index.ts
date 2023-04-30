@@ -1,1 +1,1 @@
-export * from './tools/configuration'
+export * from './tools/getPluginConfiguration'
