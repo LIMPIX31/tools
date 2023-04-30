@@ -34,7 +34,7 @@ export class TspaceCommand extends BaseCommand {
               }
             })
 
-            await writeFile(tspacePath, JSON.stringify(tsworkspaces, null, 2))
+            await writeFile(tspacePath, JSON.stringify(tsworkspaces, null, 2) + '\n')
           } catch (e: any) {
             report.reportError(MessageName.UNNAMED, e.message)
           }

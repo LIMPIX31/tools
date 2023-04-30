@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "declaration": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,7 +26,27 @@
     "target": "es2022",
     "baseUrl": "./",
     "jsx": "react-jsx",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@lmpx/code-typescript": [
+        "code/typescript"
+      ],
+      "@lmpx/code-typescript-worker": [
+        "code/typescript-worker"
+      ],
+      "@lmpx/code-worker-utils": [
+        "code/worker-utils"
+      ],
+      "@lmpx/yarn-cli": [
+        "yarn/cli"
+      ],
+      "@lmpx/yarn-plugin-tspace": [
+        "yarn/plugin-tspace"
+      ],
+      "@lmpx/yarn-plugin-typecheck": [
+        "yarn/plugin-typecheck"
+      ]
+    }
   },
   "include": [
     "yarn/**/*",
