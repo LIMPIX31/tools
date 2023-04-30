@@ -1,0 +1,26 @@
+{
+  "name": "@lmpx/yarn-plugin-self",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "builder build plugin",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "clipanion": "^3.2.0"
+  },
+  "devDependencies": {
+    "@yarnpkg/builder": "^4.0.0-rc.42",
+    "@yarnpkg/cli": "^4.0.0-rc.42",
+    "@yarnpkg/core": "^4.0.0-rc.42"
+  },
+  "peerDependencies": {
+    "@yarnpkg/cli": "^4.0.0-rc.42",
+    "@yarnpkg/core": "^4.0.0-rc.42"
+  }
+}

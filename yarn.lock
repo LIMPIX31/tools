@@ -442,6 +442,7 @@ __metadata:
   resolution: "@lmpx/yarn-cli@workspace:yarn/cli"
   dependencies:
     "@lmpx/yarn-plugin-ci": "workspace:1.0.0"
+    "@lmpx/yarn-plugin-self": "workspace:1.0.0"
     "@lmpx/yarn-plugin-tspace": "workspace:1.0.0"
     "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0"
     "@types/fs-extra": "npm:^11.0.1"
@@ -500,9 +501,23 @@ __metadata:
     "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
     react: "npm:^18.2.0"
   peerDependencies:
-    "@yarnpkg/cli": ^3.2.0-rc.8
-    "@yarnpkg/core": ^3.2.0-rc.8
-    "@yarnpkg/fslib": ^2.6.1-rc.3
+    "@yarnpkg/cli": ^4.0.0-rc.42
+    "@yarnpkg/core": ^4.0.0-rc.42
+    "@yarnpkg/fslib": ^3.0.0-rc.42
+  languageName: unknown
+  linkType: soft
+
+"@lmpx/yarn-plugin-self@workspace:1.0.0, @lmpx/yarn-plugin-self@workspace:yarn/plugin-self":
+  version: 0.0.0-use.local
+  resolution: "@lmpx/yarn-plugin-self@workspace:yarn/plugin-self"
+  dependencies:
+    "@yarnpkg/builder": "npm:^4.0.0-rc.42"
+    "@yarnpkg/cli": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    clipanion: "npm:^3.2.0"
+  peerDependencies:
+    "@yarnpkg/cli": ^4.0.0-rc.42
+    "@yarnpkg/core": ^4.0.0-rc.42
   languageName: unknown
   linkType: soft
 

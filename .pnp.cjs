@@ -46,6 +46,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:yarn/plugin-ci"\
     },\
     {\
+      "name": "@lmpx/yarn-plugin-self",\
+      "reference": "workspace:yarn/plugin-self"\
+    },\
+    {\
       "name": "@lmpx/yarn-plugin-tspace",\
       "reference": "workspace:yarn/plugin-tspace"\
     },\
@@ -65,6 +69,7 @@ const RAW_RUNTIME_STATE =
     ["@lmpx/code-worker-utils", ["workspace:code/worker-utils"]],\
     ["@lmpx/yarn-cli", ["workspace:yarn/cli"]],\
     ["@lmpx/yarn-plugin-ci", ["virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-ci", "workspace:yarn/plugin-ci"]],\
+    ["@lmpx/yarn-plugin-self", ["virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-self", "workspace:yarn/plugin-self"]],\
     ["@lmpx/yarn-plugin-tspace", ["virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-tspace", "workspace:yarn/plugin-tspace"]],\
     ["@lmpx/yarn-plugin-typecheck", ["virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-typecheck", "workspace:yarn/plugin-typecheck"]],\
     ["tools", ["workspace:."]]\
@@ -636,6 +641,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@lmpx/yarn-cli", "workspace:yarn/cli"],\
           ["@lmpx/yarn-plugin-ci", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-ci"],\
+          ["@lmpx/yarn-plugin-self", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-self"],\
           ["@lmpx/yarn-plugin-tspace", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-tspace"],\
           ["@lmpx/yarn-plugin-typecheck", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-typecheck"],\
           ["@types/fs-extra", "npm:11.0.1"],\
@@ -727,6 +733,38 @@ const RAW_RUNTIME_STATE =
           ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
           ["@yarnpkg/fslib", "npm:3.0.0-rc.42"],\
           ["react", "npm:18.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@lmpx/yarn-plugin-self", [\
+      ["virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-self", {\
+        "packageLocation": "./.yarn/__virtual__/@lmpx-yarn-plugin-self-virtual-bcddbe8afe/1/yarn/plugin-self/",\
+        "packageDependencies": [\
+          ["@lmpx/yarn-plugin-self", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-self"],\
+          ["@types/yarnpkg__cli", null],\
+          ["@types/yarnpkg__core", null],\
+          ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
+          ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
+          ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
+          ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/yarnpkg__cli",\
+          "@types/yarnpkg__core",\
+          "@yarnpkg/cli",\
+          "@yarnpkg/core"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:yarn/plugin-self", {\
+        "packageLocation": "./yarn/plugin-self/",\
+        "packageDependencies": [\
+          ["@lmpx/yarn-plugin-self", "workspace:yarn/plugin-self"],\
+          ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
+          ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
+          ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
+          ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
         ],\
         "linkType": "SOFT"\
       }]\

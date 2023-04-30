@@ -52,6 +52,9 @@
       "@lmpx/yarn-plugin-ci": [
         "yarn/plugin-ci"
       ],
+      "@lmpx/yarn-plugin-self": [
+        "yarn/plugin-self"
+      ],
       "@lmpx/yarn-plugin-tspace": [
         "yarn/plugin-tspace"
       ],

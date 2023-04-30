@@ -22,10 +22,5 @@
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.42",
     "@yarnpkg/core": "^4.0.0-rc.42"
-  },
-  "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
   }
 }

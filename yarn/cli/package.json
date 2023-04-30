@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@lmpx/yarn-plugin-ci": "workspace:1.0.0",
+    "@lmpx/yarn-plugin-self": "workspace:1.0.0",
     "@lmpx/yarn-plugin-tspace": "workspace:1.0.0",
     "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0",
     "@yarnpkg/builder": "^4.0.0-rc.42",
@@ -61,6 +62,7 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
+        "@lmpx/yarn-plugin-self",
         "@lmpx/yarn-plugin-ci",
         "@lmpx/yarn-plugin-typecheck",
         "@lmpx/yarn-plugin-tspace",
