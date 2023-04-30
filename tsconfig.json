@@ -49,6 +49,9 @@
       "@lmpx/yarn-cli": [
         "yarn/cli"
       ],
+      "@lmpx/yarn-plugin-ci": [
+        "yarn/plugin-ci"
+      ],
       "@lmpx/yarn-plugin-tspace": [
         "yarn/plugin-tspace"
       ],

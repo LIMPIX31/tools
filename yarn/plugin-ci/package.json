@@ -1,0 +1,33 @@
+{
+  "name": "@lmpx/yarn-plugin-ci",
+  "main": "src/index.ts",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "builder build plugin",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@babel/code-frame": "^7.21.4",
+    "@lmpx/cli-renderer": "workspace:*",
+    "@lmpx/cli-typescript-diagnostic-component": "workspace:*",
+    "@lmpx/code-typescript": "workspace:*",
+    "@lmpx/code-typescript-worker": "workspace:*",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@octokit/types": "^9.2.0",
+    "@types/node": "^18.16.3",
+    "@yarnpkg/builder": "^4.0.0-rc.42",
+    "@yarnpkg/cli": "^4.0.0-rc.42",
+    "@yarnpkg/core": "^4.0.0-rc.42",
+    "@yarnpkg/fslib": "^3.0.0-rc.42"
+  },
+  "peerDependencies": {
+    "@yarnpkg/cli": "^3.2.0-rc.8",
+    "@yarnpkg/core": "^3.2.0-rc.8",
+    "@yarnpkg/fslib": "^2.6.1-rc.3"
+  }
+}

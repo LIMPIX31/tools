@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/yarn/cli/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/yarn/plugin-tspace/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/yarn/plugin-typecheck/bundles" />
+      <excludeFolder url="file://$MODULE_DIR$/yarn/plugin-ci/bundles" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
