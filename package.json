@@ -13,5 +13,8 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "typescript": "^5.0.4"
+  },
+  "resolutions": {
+    "@yarnpkg/core@npm:^4.0.0-rc.42": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
   }
 }
