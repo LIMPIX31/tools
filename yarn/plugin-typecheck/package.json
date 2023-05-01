@@ -22,7 +22,7 @@
     "@types/react": "^18",
     "@yarnpkg/builder": "^4.0.0-rc.42",
     "@yarnpkg/cli": "^4.0.0-rc.42",
-    "@yarnpkg/core": "^4.0.0-rc.42",
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {

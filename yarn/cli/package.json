@@ -19,7 +19,7 @@
     "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0",
     "@yarnpkg/builder": "^4.0.0-rc.42",
     "@yarnpkg/cli": "^4.0.0-rc.42",
-    "@yarnpkg/core": "^4.0.0-rc.42",
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
     "@yarnpkg/fslib": "^3.0.0-rc.42",
     "@yarnpkg/libzip": "^3.0.0-rc.42",
     "@yarnpkg/parsers": "^3.0.0-rc.42",

@@ -398,7 +398,7 @@ __metadata:
   resolution: "@lmpx/cli-typescript-diagnostic-component@workspace:cli/components/typescript-diagnostic"
   dependencies:
     "@lmpx/code-typescript": "workspace:*"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     ink: "npm:^3.2.0"
     react: "npm:^18.2.0"
     typescript: "npm:^5.0.4"
@@ -424,8 +424,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lmpx/code-typescript@workspace:code/typescript"
   dependencies:
-    "@types/deepmerge": "npm:2.2.0"
     "@types/node": "npm:^17.0.38"
+    "@yarnpkg/fslib": "npm:3.0.0-rc.42"
     deepmerge: "npm:^4.2.2"
     typescript: "npm:^5.0.4"
   languageName: unknown
@@ -448,7 +448,7 @@ __metadata:
     "@types/fs-extra": "npm:^11.0.1"
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
     "@yarnpkg/libzip": "npm:^3.0.0-rc.42"
     "@yarnpkg/parsers": "npm:^3.0.0-rc.42"
@@ -497,7 +497,7 @@ __metadata:
     "@types/node": "npm:^18.16.3"
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
     react: "npm:^18.2.0"
   peerDependencies:
@@ -513,7 +513,7 @@ __metadata:
   dependencies:
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     clipanion: "npm:^3.2.0"
   peerDependencies:
     "@yarnpkg/cli": ^4.0.0-rc.42
@@ -527,11 +527,13 @@ __metadata:
   dependencies:
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
+    "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
     clipanion: "npm:^3.2.0"
   peerDependencies:
     "@yarnpkg/cli": ^4.0.0-rc.42
     "@yarnpkg/core": ^4.0.0-rc.42
+    "@yarnpkg/fslib": ^3.0.0-rc.42
   languageName: unknown
   linkType: soft
 
@@ -545,7 +547,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
-    "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     clipanion: "npm:^3.2.0"
     react: "npm:^18"
     typescript: "npm:^5.0.4"
@@ -770,15 +772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/deepmerge@npm:2.2.0":
-  version: 2.2.0
-  resolution: "@types/deepmerge@npm:2.2.0"
-  dependencies:
-    deepmerge: "npm:*"
-  checksum: 4745d18dce56aa08d980d62821c4d58cd6ed00ba2fd8d15b14ee0250d43a59d5e50878b81c08f08cc31d9a256bb9d5d1e9aa7326d91653d2f15db481aab47b78
-  languageName: node
-  linkType: hard
-
 "@types/emscripten@npm:^1.39.6":
   version: 1.39.6
   resolution: "@types/emscripten@npm:1.39.6"
@@ -958,7 +951,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^4.0.0-rc.42":
+"@yarnpkg/core@npm:4.0.0-rc.42":
   version: 4.0.0-rc.42
   resolution: "@yarnpkg/core@npm:4.0.0-rc.42"
   dependencies:
@@ -991,6 +984,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/core@patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch":
+  version: 4.0.0-rc.42
+  resolution: "@yarnpkg/core@patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch::version=4.0.0-rc.42&hash=61ba76"
+  dependencies:
+    "@arcanis/slice-ansi": "npm:^1.1.1"
+    "@types/semver": "npm:^7.1.0"
+    "@types/treeify": "npm:^1.0.0"
+    "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
+    "@yarnpkg/libzip": "npm:^3.0.0-rc.42"
+    "@yarnpkg/parsers": "npm:^3.0.0-rc.42"
+    "@yarnpkg/shell": "npm:^4.0.0-rc.42"
+    camelcase: "npm:^5.3.1"
+    chalk: "npm:^3.0.0"
+    ci-info: "npm:^3.2.0"
+    clipanion: "npm:^3.2.0-rc.10"
+    cross-spawn: "npm:7.0.3"
+    diff: "npm:^5.1.0"
+    globby: "npm:^11.0.1"
+    got: "npm:^11.7.0"
+    lodash: "npm:^4.17.15"
+    micromatch: "npm:^4.0.2"
+    p-limit: "npm:^2.2.0"
+    semver: "npm:^7.1.2"
+    strip-ansi: "npm:^6.0.0"
+    tar: "npm:^6.0.5"
+    tinylogic: "npm:^2.0.0"
+    treeify: "npm:^1.1.0"
+    tslib: "npm:^2.4.0"
+    tunnel: "npm:^0.0.6"
+  checksum: 87b1bd343a815a101facf3a519c9ab4ae0fb7d4c5bc4fcae8f63ec3d62fa8461a81c90e2dd2a5f651a376164d64c9c48daa6c20f12ebc52cf294c6456c52e8f6
+  languageName: node
+  linkType: hard
+
 "@yarnpkg/extensions@npm:^2.0.0-rc.24":
   version: 2.0.0-rc.24
   resolution: "@yarnpkg/extensions@npm:2.0.0-rc.24"
@@ -1000,7 +1026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^3.0.0-rc.42":
+"@yarnpkg/fslib@npm:3.0.0-rc.42, @yarnpkg/fslib@npm:^3.0.0-rc.42":
   version: 3.0.0-rc.42
   resolution: "@yarnpkg/fslib@npm:3.0.0-rc.42"
   dependencies:
@@ -1979,7 +2005,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:*, deepmerge@npm:^4.2.2":
+"deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 367ae28f98c94b2807dd6eba48f4c3d051742c2ab431f1037d60f5cb5af989aac2b170b6a891d5617679bcb95881b4e22a0616161a1f2154894b349b13d384e0

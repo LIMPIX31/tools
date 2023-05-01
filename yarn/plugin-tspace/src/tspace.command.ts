@@ -1,7 +1,6 @@
 import { BaseCommand } from '@yarnpkg/cli'
 import { Configuration, MessageName, Project, StreamReport } from '@yarnpkg/core'
-import { readFile, writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { xfs, ppath } from '@yarnpkg/fslib'
 
 export class TspaceCommand extends BaseCommand {
   static paths = [['tspace']]
@@ -10,7 +9,7 @@ export class TspaceCommand extends BaseCommand {
     const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
     const { project } = await Project.find(configuration, this.context.cwd)
 
-    const tspacePath = join(this.context.cwd, 'tsconfig.json')
+    const tspacePath = ppath.join(this.context.cwd, 'tsconfig.json')
 
     const commandReport = await StreamReport.start({
         stdout: this.context.stdout,
@@ -19,7 +18,7 @@ export class TspaceCommand extends BaseCommand {
       async (report) => {
         await report.startTimerPromise('Update tsconfig workspaces', async () => {
           try {
-            const tsworkspaces = await readFile(tspacePath, 'utf8').then(JSON.parse)
+            const tsworkspaces = await xfs.readFilePromise(tspacePath, 'utf8').then(JSON.parse)
 
             tsworkspaces.compilerOptions.paths = {}
             const paths = tsworkspaces.compilerOptions.paths
@@ -34,7 +33,7 @@ export class TspaceCommand extends BaseCommand {
               }
             })
 
-            await writeFile(tspacePath, JSON.stringify(tsworkspaces, null, 2) + '\n')
+            await xfs.writeFilePromise(tspacePath, JSON.stringify(tsworkspaces, null, 2) + '\n')
           } catch (e: any) {
             report.reportError(MessageName.UNNAMED, e.message)
           }
