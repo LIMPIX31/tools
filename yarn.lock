@@ -424,8 +424,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lmpx/code-typescript@workspace:code/typescript"
   dependencies:
-    "@types/deepmerge": "npm:2.2.0"
     "@types/node": "npm:^17.0.38"
+    "@yarnpkg/fslib": "npm:3.0.0-rc.42"
     deepmerge: "npm:^4.2.2"
     typescript: "npm:^5.0.4"
   languageName: unknown
@@ -528,10 +528,12 @@ __metadata:
     "@yarnpkg/builder": "npm:^4.0.0-rc.42"
     "@yarnpkg/cli": "npm:^4.0.0-rc.42"
     "@yarnpkg/core": "npm:^4.0.0-rc.42"
+    "@yarnpkg/fslib": "npm:^3.0.0-rc.42"
     clipanion: "npm:^3.2.0"
   peerDependencies:
     "@yarnpkg/cli": ^4.0.0-rc.42
     "@yarnpkg/core": ^4.0.0-rc.42
+    "@yarnpkg/fslib": ^3.0.0-rc.42
   languageName: unknown
   linkType: soft
 
@@ -770,15 +772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/deepmerge@npm:2.2.0":
-  version: 2.2.0
-  resolution: "@types/deepmerge@npm:2.2.0"
-  dependencies:
-    deepmerge: "npm:*"
-  checksum: 4745d18dce56aa08d980d62821c4d58cd6ed00ba2fd8d15b14ee0250d43a59d5e50878b81c08f08cc31d9a256bb9d5d1e9aa7326d91653d2f15db481aab47b78
-  languageName: node
-  linkType: hard
-
 "@types/emscripten@npm:^1.39.6":
   version: 1.39.6
   resolution: "@types/emscripten@npm:1.39.6"
@@ -1000,7 +993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/fslib@npm:^3.0.0-rc.42":
+"@yarnpkg/fslib@npm:3.0.0-rc.42, @yarnpkg/fslib@npm:^3.0.0-rc.42":
   version: 3.0.0-rc.42
   resolution: "@yarnpkg/fslib@npm:3.0.0-rc.42"
   dependencies:
@@ -1979,7 +1972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:*, deepmerge@npm:^4.2.2":
+"deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 367ae28f98c94b2807dd6eba48f4c3d051742c2ab431f1037d60f5cb5af989aac2b170b6a891d5617679bcb95881b4e22a0616161a1f2154894b349b13d384e0

@@ -1,19 +1,17 @@
-import { join } from 'node:path'
-import { existsSync } from 'node:fs'
-import { readFile } from 'node:fs/promises'
+import { PortablePath, ppath, xfs } from '@yarnpkg/fslib'
 import deepmerge from 'deepmerge'
-import { parseJsonConfigFileContent, sys, createProgram, getPreEmitDiagnostics } from 'typescript'
+import { createProgram, getPreEmitDiagnostics, parseJsonConfigFileContent, sys } from 'typescript'
 
 export * from './utils'
 
-export async function check(cwd: string, include: string[] = []) {
-  const tsconfigPath = join(cwd, './tsconfig.json')
+export async function check(cwd: PortablePath, include: string[] = []) {
+  const tsconfigPath = ppath.join(cwd, './tsconfig.json')
 
-  if (!existsSync(tsconfigPath)) {
+  if (!await xfs.existsPromise(tsconfigPath)) {
     throw new Error(`Tsconfig not found in working directory: ${cwd}`)
   }
 
-  const tsconfig = await readFile(tsconfigPath, 'utf8')
+  const tsconfig = await xfs.readFilePromise(tsconfigPath, 'utf8')
 
   const config = deepmerge(
     JSON.parse(tsconfig),

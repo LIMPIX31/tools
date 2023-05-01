@@ -604,8 +604,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./code/typescript/",\
         "packageDependencies": [\
           ["@lmpx/code-typescript", "workspace:code/typescript"],\
-          ["@types/deepmerge", "npm:2.2.0"],\
           ["@types/node", "npm:17.0.45"],\
+          ["@yarnpkg/fslib", "npm:3.0.0-rc.42"],\
           ["deepmerge", "npm:4.3.1"],\
           ["typescript", "patch:typescript@npm%3A5.0.4#optional!builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
         ],\
@@ -776,16 +776,20 @@ const RAW_RUNTIME_STATE =
           ["@lmpx/yarn-plugin-tspace", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-tspace"],\
           ["@types/yarnpkg__cli", null],\
           ["@types/yarnpkg__core", null],\
+          ["@types/yarnpkg__fslib", null],\
           ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
           ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
           ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
+          ["@yarnpkg/fslib", "npm:3.0.0-rc.42"],\
           ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
         ],\
         "packagePeers": [\
           "@types/yarnpkg__cli",\
           "@types/yarnpkg__core",\
+          "@types/yarnpkg__fslib",\
           "@yarnpkg/cli",\
-          "@yarnpkg/core"\
+          "@yarnpkg/core",\
+          "@yarnpkg/fslib"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -796,6 +800,7 @@ const RAW_RUNTIME_STATE =
           ["@yarnpkg/builder", "npm:4.0.0-rc.42"],\
           ["@yarnpkg/cli", "virtual:b5befeebffa3e6e1c9e1a3a97f20f6701067edbcfbab403999d2f164cb494710c8929ccabeef886573baaafd4421a158af110f91c39436b1e47bae0312f3f2aa#npm:4.0.0-rc.42"],\
           ["@yarnpkg/core", "npm:4.0.0-rc.42"],\
+          ["@yarnpkg/fslib", "npm:3.0.0-rc.42"],\
           ["clipanion", "virtual:ba24742e5bfaec41d1d0434e6865c2744ffb69a716f18fa84bd7d44084043647838926c96a391f66b9946857565b9825479e97ad07079ef40683084ce389d203#npm:3.2.0"]\
         ],\
         "linkType": "SOFT"\
@@ -1102,16 +1107,6 @@ const RAW_RUNTIME_STATE =
           ["@types/keyv", "npm:3.1.4"],\
           ["@types/node", "npm:18.16.2"],\
           ["@types/responselike", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/deepmerge", [\
-      ["npm:2.2.0", {\
-        "packageLocation": "./.yarn/cache/@types-deepmerge-npm-2.2.0-fdf10de75b-4745d18dce.zip/node_modules/@types/deepmerge/",\
-        "packageDependencies": [\
-          ["@types/deepmerge", "npm:2.2.0"],\
-          ["deepmerge", "npm:4.3.1"]\
         ],\
         "linkType": "HARD"\
       }]\

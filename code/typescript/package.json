@@ -7,8 +7,8 @@
     "deepmerge": "^4.2.2"
   },
   "devDependencies": {
-    "@types/deepmerge": "2.2.0",
     "@types/node": "^17.0.38",
+    "@yarnpkg/fslib": "3.0.0-rc.42",
     "typescript": "^5.0.4"
   }
 }
