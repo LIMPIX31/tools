@@ -1,11 +1,12 @@
 {
   "name": "@lmpx-config/eslint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build": "yarn lib build esm",

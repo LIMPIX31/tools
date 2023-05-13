@@ -4,7 +4,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
-import rules from './rules'
+import rules from './rules.js'
 
 export default [
   {
