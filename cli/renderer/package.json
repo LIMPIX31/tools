@@ -1,5 +1,5 @@
 {
-  "name": "@lmpx/cli-renderer",
+  "name": "@lmpx-cli/renderer",
   "main": "src/index.ts",
   "version": "1.0.0",
   "dependencies": {

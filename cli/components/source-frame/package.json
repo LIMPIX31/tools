@@ -1,5 +1,5 @@
 {
-  "name": "@lmpx/cli-source-frame-component",
+  "name": "@lmpx-cli/source-frame-component",
   "version": "1.0.0",
   "main": "src/index.ts",
   "dependencies": {

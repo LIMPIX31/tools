@@ -1,5 +1,5 @@
 {
-  "name": "@lmpx/code-worker-utils",
+  "name": "@lmpx-code/worker-utils",
   "version": "1.0.0",
   "main": "src/index.ts"
 }

@@ -28,23 +28,32 @@
     "jsx": "react",
     "noEmit": true,
     "paths": {
-      "@lmpx/cli-source-frame-component": [
+      "@lmpx-cli/source-frame-component": [
         "cli/components/source-frame"
       ],
-      "@lmpx/cli-typescript-diagnostic-component": [
+      "@lmpx-cli/typescript-diagnostic-component": [
         "cli/components/typescript-diagnostic"
       ],
-      "@lmpx/cli-renderer": [
+      "@lmpx-cli/renderer": [
         "cli/renderer"
       ],
-      "@lmpx/code-typescript": [
+      "@lmpx-code/typescript": [
         "code/typescript"
       ],
-      "@lmpx/code-typescript-worker": [
+      "@lmpx-code/typescript-worker": [
         "code/typescript-worker"
       ],
-      "@lmpx/code-worker-utils": [
+      "@lmpx-code/worker-utils": [
         "code/worker-utils"
+      ],
+      "@lmpx-config/eslint": [
+        "config/eslint"
+      ],
+      "@lmpx-config/prettier": [
+        "config/prettier"
+      ],
+      "@lmpx-config/typescript": [
+        "config/typescript"
       ],
       "@lmpx/yarn-cli": [
         "yarn/cli"
@@ -66,6 +75,7 @@
   "include": [
     "yarn/**/*",
     "code/**/*",
-    "cli/**/*"
+    "cli/**/*",
+    "config/**/*"
   ]
 }

@@ -1,7 +1,12 @@
 import { parentPort, workerData } from 'node:worker_threads'
 import { parse, stringify } from 'flatted'
-import { check } from '@lmpx/code-typescript'
+import * as ts from '@lmpx-code/typescript'
 
-const { cwd, include } = workerData
+const { options, method = 'run' } = workerData
 
-check(cwd, include).then((diagnostics) => parentPort!.postMessage(parse(stringify(diagnostics))))
+switch (method) {
+  case 'run': parentPort!.postMessage(parse(stringify(ts.run(options))))
+    break
+  case 'declaration': parentPort!.postMessage(parse(stringify(ts.declaration(options))))
+    break
+}

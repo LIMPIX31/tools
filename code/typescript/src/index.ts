@@ -1,21 +1,22 @@
-import { PortablePath, ppath, xfs } from '@yarnpkg/fslib'
+import { PortablePath } from '@yarnpkg/fslib'
 import deepmerge from 'deepmerge'
-import { createProgram, getPreEmitDiagnostics, parseJsonConfigFileContent, sys } from 'typescript'
+import { type CompilerOptions, createProgram, getPreEmitDiagnostics, parseJsonConfigFileContent, sys } from 'typescript'
 
 export * from './utils'
 
-export async function check(cwd: PortablePath, include: string[] = []) {
-  const tsconfigPath = ppath.join(cwd, './tsconfig.json')
+export interface RunOptions {
+  cwd: PortablePath,
+  tsconfig: object,
+  overrides?: CompilerOptions
+  include?: string[]
+  noEmit?: boolean
+}
 
-  if (!await xfs.existsPromise(tsconfigPath)) {
-    throw new Error(`Tsconfig not found in working directory: ${cwd}`)
-  }
-
-  const tsconfig = await xfs.readFilePromise(tsconfigPath, 'utf8')
-
+export function run({ cwd, tsconfig, include = [], noEmit = true, overrides = {} }: RunOptions) {
   const config = deepmerge(
-    JSON.parse(tsconfig),
-    { include },
+    tsconfig,
+    { compilerOptions: overrides },
+    { include } as any,
   )
 
   const { fileNames, options, errors } = parseJsonConfigFileContent(config, sys, cwd)
@@ -26,10 +27,24 @@ export async function check(cwd: PortablePath, include: string[] = []) {
 
   const program = createProgram(fileNames, {
     ...options,
-    noEmit: true,
+    noEmit,
   })
 
   const result = program.emit()
 
   return getPreEmitDiagnostics(program).concat(result.diagnostics)
+}
+
+export type EmitDeclarationOptions = RunOptions
+
+export function declaration(options: EmitDeclarationOptions) {
+  return run({
+    ...options,
+    overrides:
+      {
+        ...options.overrides,
+        emitDeclarationOnly: true,
+        declaration: true,
+      },
+  })
 }

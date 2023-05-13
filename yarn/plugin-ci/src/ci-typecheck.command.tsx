@@ -4,10 +4,10 @@ import { BaseCommand } from '@yarnpkg/cli'
 import { Configuration, MessageName, Project, StreamReport } from '@yarnpkg/core'
 import { PortablePath, ppath, xfs } from '@yarnpkg/fslib'
 import { codeFrameColumns } from '@babel/code-frame'
-import { TypescriptDiagnostic } from '@lmpx/cli-typescript-diagnostic-component'
-import { check } from '@lmpx/code-typescript-worker'
-import { renderStatic } from '@lmpx/cli-renderer'
-import { flattenDiagnosticMessageText, getLineAndCharacterOfPosition } from '@lmpx/code-typescript'
+import { TypescriptDiagnostic } from '@lmpx-cli/typescript-diagnostic-component'
+import { run } from '@lmpx-code/typescript-worker'
+import { renderStatic } from '@lmpx-cli/renderer'
+import { flattenDiagnosticMessageText, getLineAndCharacterOfPosition } from '@lmpx-code/typescript'
 import { Annotation, AnnotationLevel, GitHubChecks } from './github.checks'
 
 class CiTypecheckCommand extends BaseCommand {
@@ -23,18 +23,28 @@ class CiTypecheckCommand extends BaseCommand {
         configuration,
       },
       async (report) => {
+        const tsconfigPath = ppath.join(project.cwd, 'tsconfig.json')
+
+        if (!await xfs.existsPromise(tsconfigPath)) {
+          report.reportError(MessageName.UNNAMED, 'Tsconfig is not exists')
+          return
+        }
+
+        const tsconfig = await xfs.readFilePromise(tsconfigPath, 'utf8').then(JSON.parse)
+
         await report.startTimerPromise('Typecheck', async () => {
           const checks = new GitHubChecks('Typecheck')
 
           const { id: checkId } = await checks.start()
 
           try {
-            const diagnostics = await check(
-              project.cwd,
-              project.topLevelWorkspace.manifest.workspaceDefinitions.map(
+            const diagnostics = await run({
+              cwd: project.cwd,
+              include: project.topLevelWorkspace.manifest.workspaceDefinitions.map(
                 (definition) => definition.pattern,
               ),
-            )
+              tsconfig
+            })
 
             diagnostics.forEach((diagnostic) => {
               const output = renderStatic(<TypescriptDiagnostic diagnostic={diagnostic} project={project} />)

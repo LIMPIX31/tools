@@ -1,10 +1,10 @@
 import React, { type FC, useMemo } from 'react'
 import { TypescriptDiagnosticProps } from './typescript-diagnostic.interface'
 import Box from 'ink/build/components/Box'
-import { getLineAndCharacterOfPosition, flattenDiagnosticMessageText } from '@lmpx/code-typescript'
+import { getLineAndCharacterOfPosition, flattenDiagnosticMessageText } from '@lmpx-code/typescript'
 import { isAbsolute, relative } from 'node:path'
 import Text from 'ink/build/components/Text'
-import { SourceFrame } from '@lmpx/cli-source-frame-component'
+import { SourceFrame } from '@lmpx-cli/source-frame-component'
 
 export const TypescriptDiagnostic: FC<TypescriptDiagnosticProps> = ({ diagnostic, project }) => {
   const file = useMemo(() => diagnostic.file, [diagnostic])
