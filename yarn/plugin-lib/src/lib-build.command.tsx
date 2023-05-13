@@ -38,7 +38,7 @@ export class LibBuildCommand extends BaseCommand {
 
         await report.startTimerPromise('Building', async () => {
           const diagnostics = await build({
-            cwd: this.context.cwd,
+            cwd: project.cwd,
             include: [join(this.context.cwd, './src')],
             overrides: {
               outDir: join(this.context.cwd, this.target as PortablePath),

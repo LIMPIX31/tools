@@ -851,7 +851,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./config/eslint/",\
         "packageDependencies": [\
           ["@lmpx-config/eslint", "workspace:config/eslint"],\
-          ["@lmpx-config/prettier", "workspace:config/prettier"],\
           ["@types/eslint", "npm:8.37.0"],\
           ["@types/node", "npm:20.1.3"],\
           ["@typescript-eslint/eslint-plugin", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:5.59.5"],\
