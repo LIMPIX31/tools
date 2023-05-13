@@ -5,4 +5,5 @@ export default {
   jsxSingleQuote: true,
   trailingComma: 'all',
   printWidth: 120,
+  endOfLine: "lf",
 }
