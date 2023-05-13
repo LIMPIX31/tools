@@ -15,8 +15,8 @@
     "clipanion": "^3.2.0"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.42",
-    "@yarnpkg/cli": "^4.0.0-rc.42",
+    "@yarnpkg/builder": "^4.0.0-rc.43",
+    "@yarnpkg/cli": "^4.0.0-rc.43",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
   },
   "peerDependencies": {

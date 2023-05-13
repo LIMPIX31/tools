@@ -1,9 +1,9 @@
 {
   "name": "tools",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@4.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn workspace @lmpx/yarn-cli build"
+    "build": "yarn workspace @lmpx/yarn-cli build && cp ./yarn/cli/bundles/yarn.js ./.yarn/releases/"
   },
   "workspaces": [
     "yarn/**/*",

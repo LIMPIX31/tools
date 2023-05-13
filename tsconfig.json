@@ -52,14 +52,14 @@
       "@lmpx-config/prettier": [
         "config/prettier"
       ],
-      "@lmpx-config/typescript": [
-        "config/typescript"
-      ],
       "@lmpx/yarn-cli": [
         "yarn/cli"
       ],
       "@lmpx/yarn-plugin-ci": [
         "yarn/plugin-ci"
+      ],
+      "@lmpx/yarn-plugin-files": [
+        "yarn/plugin-files"
       ],
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"
@@ -69,6 +69,12 @@
       ],
       "@lmpx/yarn-plugin-typecheck": [
         "yarn/plugin-typecheck"
+      ],
+      "@lmpx/yarn-plugin-workspaces": [
+        "yarn/plugin-workspaces"
+      ],
+      "@lmpx/yarn-workspace-utils": [
+        "yarn/workspace-utils"
       ]
     }
   },
