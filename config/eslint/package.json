@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
+  "type": "module",
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
-    "build": "yarn lib build",
+    "build": "yarn lib build esm",
     "prepack": "yarn build",
     "postpack": "rm -rf ./dist"
   },

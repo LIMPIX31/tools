@@ -15,6 +15,8 @@ export class LibBuildCommand extends BaseCommand {
 
   target = Option.String('-t,--target', './dist')
 
+  format = Option.String({ required: false })
+
   async execute() {
     const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
     const { project, workspace } = await Project.find(configuration, this.context.cwd)
@@ -37,10 +39,16 @@ export class LibBuildCommand extends BaseCommand {
         await this.cleanTarget()
 
         await report.startTimerPromise('Building', async () => {
+          const module: any = this.format
+            ?.replaceAll('cjs', 'commonjs')
+            ?.replaceAll('esm', 'esnext')
+            ?? 'esnext'
+
           const diagnostics = await build({
             cwd: project.cwd,
             include: [join(this.context.cwd, './src')],
             overrides: {
+              module,
               outDir: join(this.context.cwd, this.target as PortablePath),
             },
             tsconfig,
