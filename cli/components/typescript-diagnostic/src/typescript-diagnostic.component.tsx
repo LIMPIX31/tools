@@ -37,7 +37,7 @@ export const TypescriptDiagnostic: FC<TypescriptDiagnosticProps> = ({ diagnostic
     return project.getWorkspaceByFilePath(filepath)
   }, [project])
 
-  const workspaceName = useMemo(({ scope, name } = workspace.manifest.name ?? {}) => {
+  const workspaceName = useMemo(({ scope, name } = workspace?.manifest?.name ?? {}) => {
     if (!name) {
       return null
     }

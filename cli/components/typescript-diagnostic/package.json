@@ -2,6 +2,9 @@
   "name": "@lmpx-cli/typescript-diagnostic-component",
   "main": "src/index.ts",
   "version": "1.0.0",
+  "dependencies": {
+    "@lmpx-cli/source-frame-component": "workspace:*"
+  },
   "devDependencies": {
     "@lmpx-code/typescript": "workspace:*",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
@@ -10,7 +13,7 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "ink": "^3.0.8",
-    "react": "*"
+    "ink": "^3.2.0",
+    "react": "18"
   }
 }

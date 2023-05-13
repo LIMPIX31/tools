@@ -61,6 +61,9 @@
       "@lmpx/yarn-plugin-files": [
         "yarn/plugin-files"
       ],
+      "@lmpx/yarn-plugin-lib": [
+        "yarn/plugin-lib"
+      ],
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"
       ],

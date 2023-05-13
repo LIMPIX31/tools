@@ -13,11 +13,11 @@ export interface RunOptions {
 }
 
 export function run({ cwd, tsconfig, include = [], noEmit = true, overrides = {} }: RunOptions) {
-  const config = deepmerge(
+  const config = deepmerge.all([
     tsconfig,
     { compilerOptions: overrides },
-    { include } as any,
-  )
+    { include },
+  ])
 
   const { fileNames, options, errors } = parseJsonConfigFileContent(config, sys, cwd)
 
@@ -40,10 +40,25 @@ export type EmitDeclarationOptions = RunOptions
 export function declaration(options: EmitDeclarationOptions) {
   return run({
     ...options,
+    noEmit: false,
     overrides:
       {
         ...options.overrides,
         emitDeclarationOnly: true,
+        declaration: true,
+      },
+  })
+}
+
+export type BuildOptions = RunOptions
+
+export function build(options: BuildOptions) {
+  return run({
+    ...options,
+    noEmit: false,
+    overrides:
+      {
+        ...options.overrides,
         declaration: true,
       },
   })

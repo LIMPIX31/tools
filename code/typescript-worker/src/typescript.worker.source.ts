@@ -9,4 +9,6 @@ switch (method) {
     break
   case 'declaration': parentPort!.postMessage(parse(stringify(ts.declaration(options))))
     break
+  case 'build': parentPort!.postMessage(parse(stringify(ts.build(options))))
+    break
 }

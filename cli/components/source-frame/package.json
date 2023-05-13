@@ -15,6 +15,6 @@
   },
   "peerDependencies": {
     "ink": "^3.2.0",
-    "react": "*"
+    "react": "18"
   }
 }
