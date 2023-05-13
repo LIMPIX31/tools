@@ -29,6 +29,7 @@
     "@types/node": "^20.1.3"
   },
   "publishConfig": {
+    "access": "public",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts"
   }
