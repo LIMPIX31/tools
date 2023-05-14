@@ -116,12 +116,7 @@ const rules: Linter.RulesRecord = {
     },
   ],
   'jsx-a11y/html-has-lang': [0],
-  'react/function-component-definition': [
-    2,
-    {
-      namedComponents: 'arrow-function',
-    },
-  ],
+  'react/function-component-definition': ['off'],
   'react/jsx-props-no-spreading': [
     0,
     {
@@ -592,7 +587,7 @@ const rules: Linter.RulesRecord = {
       ignorePureComponents: true,
     },
   ],
-  'react/react-in-jsx-scope': ['error'],
+  'react/react-in-jsx-scope': ['off'],
   'react/require-render-return': ['error'],
   'react/self-closing-comp': ['error'],
   'react/sort-comp': [
@@ -942,7 +937,7 @@ const rules: Linter.RulesRecord = {
       considerPropertyDescriptor: true,
     },
   ],
-  'func-names': ['warn'],
+  'func-names': ['off'],
   'func-style': ['off', 'expression'],
   'id-denylist': ['off'],
   'id-length': ['off'],
