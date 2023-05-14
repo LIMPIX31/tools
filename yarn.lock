@@ -630,7 +630,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@lmpx-config/eslint@workspace:*, @lmpx-config/eslint@workspace:config/eslint":
+"@lmpx-config/eslint@npm:0.0.4, @lmpx-config/eslint@workspace:*, @lmpx-config/eslint@workspace:config/eslint":
   version: 0.0.0-use.local
   resolution: "@lmpx-config/eslint@workspace:config/eslint"
   dependencies:
@@ -5913,6 +5913,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tools@workspace:."
   dependencies:
+    "@lmpx-config/eslint": "npm:0.0.4"
     eslint: "npm:^8.40.0"
     husky: "npm:^8.0.3"
     typescript: "npm:^5.0.4"
