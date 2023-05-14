@@ -21,7 +21,7 @@ export class TspaceCommand extends BaseCommand {
             const tsworkspaces = await xfs.readFilePromise(tspacePath, 'utf8').then(JSON.parse)
 
             tsworkspaces.compilerOptions.paths = {}
-            const paths = tsworkspaces.compilerOptions.paths
+            const { paths } = tsworkspaces.compilerOptions
 
             project.workspaces.filter(ws => ws.cwd !== this.context.cwd).forEach(({ relativeCwd, manifest: { name } })=> {
               if (name) {
@@ -33,7 +33,7 @@ export class TspaceCommand extends BaseCommand {
               }
             })
 
-            await xfs.writeFilePromise(tspacePath, JSON.stringify(tsworkspaces, null, 2) + '\n')
+            await xfs.writeFilePromise(tspacePath, `${JSON.stringify(tsworkspaces, null, 2)}\n`)
           } catch (e: any) {
             report.reportError(MessageName.UNNAMED, e.message)
           }

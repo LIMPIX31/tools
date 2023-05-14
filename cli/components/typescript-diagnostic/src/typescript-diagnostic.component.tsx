@@ -27,7 +27,7 @@ export const TypescriptDiagnostic: FC<TypescriptDiagnosticProps> = ({ diagnostic
     }
 
     return null
-  }, [diagnostic])
+  }, [diagnostic, file])
 
   const workspace = useMemo(() => {
     if (!filepath) {
@@ -35,7 +35,7 @@ export const TypescriptDiagnostic: FC<TypescriptDiagnosticProps> = ({ diagnostic
     }
 
     return project.getWorkspaceByFilePath(filepath)
-  }, [project])
+  }, [project, filepath])
 
   const workspaceName = useMemo(({ scope, name } = workspace?.manifest?.name ?? {}) => {
     if (!name) {
@@ -53,7 +53,7 @@ export const TypescriptDiagnostic: FC<TypescriptDiagnosticProps> = ({ diagnostic
     const relativePath = relative(workspace.cwd, filepath)
 
     return relativePath.replace(/^src[/\\]/, '')
-  }, [workspace])
+  }, [workspace, filepath])
 
   return (
     <Box marginTop={1} flexDirection='column'>

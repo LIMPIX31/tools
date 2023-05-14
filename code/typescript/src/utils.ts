@@ -1,30 +1,27 @@
 export const flattenDiagnosticMessageText = (diag, newLine, indent = 0) => {
-  if (indent === void 0) {
-    indent = 0
-  }
-
   if (typeof diag === 'string') {
     return diag
-  } else if (diag === undefined) {
+  }
+
+  if (diag === undefined) {
     return ''
   }
 
-  var result = ''
+  let result = ''
 
   if (indent) {
     result += newLine
-    for (var i = 0; i < indent; i++) {
+    for (let i = 0; i < indent; i++) {
       result += '  '
     }
   }
 
   result += diag.messageText
-  indent++
 
   if (diag.next) {
-    for (var _i = 0, _a = diag.next; _i < _a.length; _i++) {
-      var kid = _a[_i]
-      result += flattenDiagnosticMessageText(kid, newLine, indent)
+    for (let i = 0, a = diag.next; i < a.length; i++) {
+      const kid = a[i]
+      result += flattenDiagnosticMessageText(kid, newLine, indent + 1)
     }
   }
 

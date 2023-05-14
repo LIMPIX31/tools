@@ -24,7 +24,6 @@ class WorkspacesChangedListCommand extends BaseCommand {
         json: this.json,
         stdout: this.context.stdout,
       },
-      // eslint-disable-next-line no-shadow
       async (report) => {
         const files = await getChangedFiles(project)
         const workspaces = getChangedWorkspaces(project, files)

@@ -72,14 +72,7 @@ const rules: Linter.RulesRecord = {
       variables: true,
     },
   ],
-  '@typescript-eslint/no-use-before-define': [
-    'error',
-    {
-      functions: true,
-      classes: true,
-      variables: true,
-    },
-  ],
+  '@typescript-eslint/no-use-before-define': ['off'],
   quotes: 0,
   '@typescript-eslint/quotes': 0,
   semi: 'off',
@@ -170,14 +163,7 @@ const rules: Linter.RulesRecord = {
   ],
   '@typescript-eslint/no-empty-function': ['error'],
   '@typescript-eslint/indent': 'off',
-  'no-shadow': [
-    'error',
-    {
-      allow: ['ClientFactory', 'ServerBuilder'],
-      builtinGlobals: false,
-      hoist: 'functions',
-    },
-  ],
+  'no-shadow': ['off'],
   curly: 0,
   'lines-around-comment': 0,
   'max-len': 0,
@@ -494,17 +480,7 @@ const rules: Linter.RulesRecord = {
       allowChildren: false,
     },
   ],
-  'no-underscore-dangle': [
-    'error',
-    {
-      allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],
-      allowAfterThis: false,
-      allowAfterSuper: false,
-      enforceInMethodNames: true,
-      allowAfterThisConstructor: false,
-      allowFunctionParams: true,
-    },
-  ],
+  'no-underscore-dangle': ['off'],
   'react/display-name': [
     'off',
     {
@@ -1033,15 +1009,15 @@ const rules: Linter.RulesRecord = {
   ],
   'newline-after-var': ['off'],
   'newline-before-return': ['off'],
-  'no-bitwise': ['error'],
+  'no-bitwise': ['off'],
   'no-continue': ['error'],
   'no-inline-comments': ['off'],
   'no-lonely-if': ['error'],
   'no-multi-assign': ['error'],
   'no-negated-condition': ['off'],
-  'no-nested-ternary': ['error'],
+  'no-nested-ternary': ['off'],
   'no-new-object': ['error'],
-  'no-plusplus': ['error'],
+  'no-plusplus': ['off'],
   'no-restricted-syntax': [
     'error',
     {
@@ -1116,10 +1092,10 @@ const rules: Linter.RulesRecord = {
     },
   ],
   'no-async-promise-executor': ['error'],
-  'no-await-in-loop': ['error'],
+  'no-await-in-loop': ['off'],
   'no-compare-neg-zero': ['error'],
   'no-cond-assign': ['error', 'always'],
-  'no-console': ['warn'],
+  'no-console': ['off'],
   'no-constant-condition': ['warn'],
   'no-control-regex': ['error'],
   'no-debugger': ['error'],
@@ -1183,12 +1159,7 @@ const rules: Linter.RulesRecord = {
   'block-scoped-var': ['error'],
   complexity: ['off', 20],
   'consistent-return': ['error'],
-  'default-case': [
-    'error',
-    {
-      commentPattern: '^no default$',
-    },
-  ],
+  'default-case': ['off'],
   'default-case-last': ['error'],
   'default-param-last': ['off'],
   'dot-notation': [
@@ -1282,7 +1253,7 @@ const rules: Linter.RulesRecord = {
     },
   ],
   'no-proto': ['error'],
-  'no-redeclare': ['error'],
+  'no-redeclare': ['off'],
   'no-restricted-properties': [
     'error',
     {

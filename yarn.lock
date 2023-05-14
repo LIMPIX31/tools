@@ -177,6 +177,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/stack-trace@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls/stack-trace@npm:0.0.2"
+  dependencies:
+    "@atls/webpack-source-map": "npm:0.0.2"
+    stack-utils: "npm:^2.0.5"
+  checksum: aac2598019bcaba0a500b24a11e4a958ac85340815bf2f1ad35faf859f37e510008791dd4b0667edb673d13e4995e31ae2f5894c9a0fa79526aaee72920690d3
+  languageName: node
+  linkType: hard
+
+"@atls/webpack-source-map@npm:0.0.2":
+  version: 0.0.2
+  resolution: "@atls/webpack-source-map@npm:0.0.2"
+  checksum: 82dff7558a85ce95aef578b25003411e413769c659f49823c8803115974daffd9fa981ef6a295452513a6fee5ecafab2047599698d691ab5c6534990cf84160e
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.21.4":
   version: 7.21.4
   resolution: "@babel/code-frame@npm:7.21.4"
@@ -455,11 +472,47 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lmpx-cli/error-info-component@workspace:*, @lmpx-cli/error-info-component@workspace:cli/components/error-info":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-cli/error-info-component@workspace:cli/components/error-info"
+  dependencies:
+    "@lmpx-cli/stack-trace-component": "workspace:*"
+    "@types/node": "npm:^20.1.4"
+    "@types/react": "npm:^18.2.6"
+    ink: "npm:^3.2.0"
+    react: "npm:^18.2.0"
+  peerDependencies:
+    ink: ^3.2.0
+    react: 18
+  languageName: unknown
+  linkType: soft
+
+"@lmpx-cli/eslint-result-component@workspace:*, @lmpx-cli/eslint-result-component@workspace:cli/components/eslint-result":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-cli/eslint-result-component@workspace:cli/components/eslint-result"
+  dependencies:
+    "@lmpx-cli/renderer": "workspace:*"
+    "@lmpx-cli/source-frame-component": "workspace:*"
+    "@types/eslint": "npm:^8.37.0"
+    "@types/react": "npm:^18.2.6"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
+    "@yarnpkg/fslib": "npm:^3.0.0-rc.43"
+    ink: "npm:^3.2.0"
+    react: "npm:^18.2.0"
+    strip-ansi: "npm:^7.0.1"
+  peerDependencies:
+    "@yarnpkg/core": ^4.0.0-rc.43
+    "@yarnpkg/fslib": ^3.0.0-rc.43
+    ink: ^3.2.0
+    react: 18
+  languageName: unknown
+  linkType: soft
+
 "@lmpx-cli/renderer@workspace:*, @lmpx-cli/renderer@workspace:cli/renderer":
   version: 0.0.0-use.local
   resolution: "@lmpx-cli/renderer@workspace:cli/renderer"
   dependencies:
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     "@types/react": "npm:^18.2.6"
     ink: "npm:^3.2.0"
     react: "npm:^18.2.0"
@@ -472,11 +525,28 @@ __metadata:
   dependencies:
     "@babel/code-frame": "npm:^7.21.4"
     "@types/babel__code-frame": "npm:^7.0.3"
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     "@types/react": "npm:^18.2.6"
     ink: "npm:^3.2.0"
     react: "npm:^18.2.0"
     supports-color: "npm:^9.3.1"
+  peerDependencies:
+    ink: ^3.2.0
+    react: 18
+  languageName: unknown
+  linkType: soft
+
+"@lmpx-cli/stack-trace-component@workspace:*, @lmpx-cli/stack-trace-component@workspace:cli/components/stack-trace":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-cli/stack-trace-component@workspace:cli/components/stack-trace"
+  dependencies:
+    "@atls/stack-trace": "npm:^0.0.2"
+    "@lmpx-cli/renderer": "workspace:*"
+    "@lmpx-cli/source-frame-component": "workspace:*"
+    "@types/react": "npm:^18.2.6"
+    ink: "npm:^3.2.0"
+    react: "npm:^18.2.0"
+    strip-ansi: "npm:^7.0.1"
   peerDependencies:
     ink: ^3.2.0
     react: 18
@@ -499,6 +569,38 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lmpx-code/lint-worker@workspace:*, @lmpx-code/lint-worker@workspace:code/lint-worker":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-code/lint-worker@workspace:code/lint-worker"
+  dependencies:
+    "@lmpx-code/lint": "workspace:*"
+    "@lmpx-code/worker-utils": "workspace:*"
+    "@types/node": "npm:^20.1.4"
+    eslint: "npm:^8.40.0"
+    vite: "npm:^4.3.5"
+  languageName: unknown
+  linkType: soft
+
+"@lmpx-code/lint@workspace:*, @lmpx-code/lint@workspace:code/lint":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-code/lint@workspace:code/lint"
+  dependencies:
+    "@lmpx-config/eslint": "workspace:*"
+    "@types/node": "npm:^20.1.4"
+    eslint: "npm:^8.40.0"
+    globby: "npm:^13.1.4"
+    ignore: "npm:^5.2.4"
+  peerDependencies:
+    react: "*"
+    typescript: "*"
+  peerDependenciesMeta:
+    react:
+      optional: true
+    typescript:
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@lmpx-code/typescript-worker@workspace:*, @lmpx-code/typescript-worker@workspace:code/typescript-worker":
   version: 0.0.0-use.local
   resolution: "@lmpx-code/typescript-worker@workspace:code/typescript-worker"
@@ -515,7 +617,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lmpx-code/typescript@workspace:code/typescript"
   dependencies:
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     "@yarnpkg/fslib": "npm:3.0.0-rc.43"
     deepmerge: "npm:^4.3.1"
     typescript: "npm:^5.0.4"
@@ -528,12 +630,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@lmpx-config/eslint@workspace:config/eslint":
+"@lmpx-config/eslint@workspace:*, @lmpx-config/eslint@workspace:config/eslint":
   version: 0.0.0-use.local
   resolution: "@lmpx-config/eslint@workspace:config/eslint"
   dependencies:
     "@types/eslint": "npm:^8.37.0"
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     "@typescript-eslint/eslint-plugin": "npm:^5.59.5"
     "@typescript-eslint/parser": "npm:^5.59.5"
     eslint: "npm:^8.40.0"
@@ -552,7 +654,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lmpx-config/prettier@workspace:config/prettier"
   dependencies:
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     prettier: "npm:^2.8.8"
   languageName: unknown
   linkType: soft
@@ -564,6 +666,7 @@ __metadata:
     "@lmpx/yarn-plugin-ci": "workspace:1.0.0"
     "@lmpx/yarn-plugin-files": "workspace:1.0.0"
     "@lmpx/yarn-plugin-lib": "workspace:1.0.0"
+    "@lmpx/yarn-plugin-lint": "workspace:1.0.0"
     "@lmpx/yarn-plugin-self": "workspace:1.0.0"
     "@lmpx/yarn-plugin-tspace": "workspace:1.0.0"
     "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0"
@@ -617,7 +720,7 @@ __metadata:
     "@lmpx-code/typescript": "workspace:*"
     "@lmpx-code/typescript-worker": "workspace:*"
     "@octokit/types": "npm:^9.2.2"
-    "@types/node": "npm:^20.1.3"
+    "@types/node": "npm:^20.1.4"
     "@yarnpkg/builder": "npm:^4.0.0-rc.43"
     "@yarnpkg/cli": "npm:^4.0.0-rc.43"
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
@@ -667,6 +770,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lmpx/yarn-plugin-lint@workspace:1.0.0, @lmpx/yarn-plugin-lint@workspace:yarn/plugin-lint":
+  version: 0.0.0-use.local
+  resolution: "@lmpx/yarn-plugin-lint@workspace:yarn/plugin-lint"
+  dependencies:
+    "@lmpx-cli/error-info-component": "workspace:*"
+    "@lmpx-cli/eslint-result-component": "workspace:*"
+    "@lmpx-cli/renderer": "workspace:*"
+    "@lmpx-code/lint-worker": "workspace:*"
+    "@yarnpkg/builder": "npm:^4.0.0-rc.43"
+    "@yarnpkg/cli": "npm:^4.0.0-rc.43"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
+    clipanion: "npm:^3.2.0"
+    react: "npm:^18.2.0"
+    typescript: "npm:^5.0.4"
+  peerDependencies:
+    "@yarnpkg/cli": ^4.0.0-rc.43
+    "@yarnpkg/core": ^4.0.0-rc.43
+  languageName: unknown
+  linkType: soft
+
 "@lmpx/yarn-plugin-self@workspace:1.0.0, @lmpx/yarn-plugin-self@workspace:yarn/plugin-self":
   version: 0.0.0-use.local
   resolution: "@lmpx/yarn-plugin-self@workspace:yarn/plugin-self"
@@ -691,9 +814,9 @@ __metadata:
     "@yarnpkg/fslib": "npm:^3.0.0-rc.43"
     clipanion: "npm:^3.2.0"
   peerDependencies:
-    "@yarnpkg/cli": ^4.0.0-rc.42
-    "@yarnpkg/core": ^4.0.0-rc.42
-    "@yarnpkg/fslib": ^3.0.0-rc.42
+    "@yarnpkg/cli": ^4.0.0-rc.43
+    "@yarnpkg/core": ^4.0.0-rc.43
+    "@yarnpkg/fslib": ^3.0.0-rc.43
   languageName: unknown
   linkType: soft
 
@@ -713,9 +836,9 @@ __metadata:
     react: "npm:^18.2.0"
     typescript: "npm:^5.0.4"
   peerDependencies:
-    "@yarnpkg/cli": ^4.0.0-rc.42
-    "@yarnpkg/core": ^4.0.0-rc.42
-    "@yarnpkg/fslib": ^3.0.0-rc.42
+    "@yarnpkg/cli": ^4.0.0-rc.43
+    "@yarnpkg/core": ^4.0.0-rc.43
+    "@yarnpkg/fslib": ^3.0.0-rc.43
   languageName: unknown
   linkType: soft
 
@@ -1046,10 +1169,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.1.3":
-  version: 20.1.3
-  resolution: "@types/node@npm:20.1.3"
-  checksum: 69eeb75b3c5452116792ffbe9143ed7ed561c1d37887af216926cd30dac5926b6d5e092aa673d80c7af917f315d422bb56ff43b42a1c3727fe34a32b1201940b
+"@types/node@npm:^20.1.4":
+  version: 20.1.4
+  resolution: "@types/node@npm:20.1.4"
+  checksum: a42d78780d9c26d50c926a358831f439561008e14a89e306fbdc2e15ff58fed8ac744c1d12b52cf32309fce6ee774da8eb46bce23175ced3ec1d83e2bb21802b
   languageName: node
   linkType: hard
 
@@ -3262,7 +3385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -3612,6 +3735,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"globby@npm:^13.1.4":
+  version: 13.1.4
+  resolution: "globby@npm:13.1.4"
+  dependencies:
+    dir-glob: "npm:^3.0.1"
+    fast-glob: "npm:^3.2.11"
+    ignore: "npm:^5.2.0"
+    merge2: "npm:^1.4.1"
+    slash: "npm:^4.0.0"
+  checksum: 3e433409da6b65206694b0d3fec692f42b9eb9a1d1406851a1237508e6dd12a4e70c3ba3d7b6b26a8c8e71aab6a84e648fca6b955abc18dd37341a44ac341567
+  languageName: node
+  linkType: hard
+
 "globrex@npm:^0.1.2":
   version: 0.1.2
   resolution: "globrex@npm:0.1.2"
@@ -3802,7 +3938,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^5.2.0":
+"ignore@npm:^5.2.0, ignore@npm:^5.2.4":
   version: 5.2.4
   resolution: "ignore@npm:5.2.4"
   checksum: 55c58d848bb753a2b7e0b4a19352f9212eae2e4a05e4a12753e90b921108a6caa140adf958a5084b144bedd886b44e3bc93f6b4839e5aba1fb4a72c6625da4c1
@@ -5444,6 +5580,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slash@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "slash@npm:4.0.0"
+  checksum: 0327fcda20ceb59983f59b6016ecc1d8a0c750a66af0205cdb0d0b92b857586c847515d3098a7538816c61a145d3822aec5509b0fe5c9ccff14789e0603c8ea1
+  languageName: node
+  linkType: hard
+
 "slice-ansi@npm:^3.0.0":
   version: 3.0.0
   resolution: "slice-ansi@npm:3.0.0"
@@ -5515,7 +5658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stack-utils@npm:^2.0.2":
+"stack-utils@npm:^2.0.2, stack-utils@npm:^2.0.5":
   version: 2.0.6
   resolution: "stack-utils@npm:2.0.6"
   dependencies:
@@ -5770,6 +5913,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "tools@workspace:."
   dependencies:
+    eslint: "npm:^8.40.0"
     husky: "npm:^8.0.3"
     typescript: "npm:^5.0.4"
   languageName: unknown

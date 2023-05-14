@@ -2,17 +2,11 @@
 // return value is what's used within the bundle (cf val-loader).
 
 module.exports = ({modules, plugins}) => {
-  const importSegment = modules.map((request, index) => {
-    return `import * as _${index} from ${JSON.stringify(request)};\n`;
-  }).join(``);
+  const importSegment = modules.map((request, index) => `import * as _${index} from ${JSON.stringify(request)};\n`).join(``)
 
-  const moduleSegment = `  modules: new Map([\n${modules.map((request, index) => {
-    return `    [${JSON.stringify(require(`${request}/package.json`).name)}, _${index}],\n`;
-  }).join(``)}  ]),\n`;
+  const moduleSegment = `  modules: new Map([\n${modules.map((request, index) => `    [${JSON.stringify(require(`${request}/package.json`).name)}, _${index}],\n`).join(``)}  ]),\n`;
 
-  const pluginSegment = `  plugins: new Set([\n${plugins.map(request => {
-    return `    ${JSON.stringify(require(`${request}/package.json`).name)},\n`;
-  }).join(``)}  ]),\n`;
+  const pluginSegment = `  plugins: new Set([\n${plugins.map(request => `    ${JSON.stringify(require(`${request}/package.json`).name)},\n`).join(``)}  ]),\n`;
 
   return {
     code: [
@@ -22,5 +16,5 @@ module.exports = ({modules, plugins}) => {
       pluginSegment,
       `});\n`,
     ].join(`\n`),
-  };
-};
+  }
+}

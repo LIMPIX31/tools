@@ -1,0 +1,21 @@
+{
+  "name": "@lmpx-cli/stack-trace-component",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls/stack-trace": "^0.0.2",
+    "@lmpx-cli/renderer": "workspace:*",
+    "@lmpx-cli/source-frame-component": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "ink": "^3.2.0",
+    "react": "^18.2.0",
+    "strip-ansi": "^7.0.1"
+  },
+  "peerDependencies": {
+    "ink": "^3.2.0",
+    "react": "18"
+  }
+}

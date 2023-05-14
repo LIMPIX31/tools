@@ -19,7 +19,7 @@ export class LibBuildCommand extends BaseCommand {
 
   async execute() {
     const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
-    const { project, workspace } = await Project.find(configuration, this.context.cwd)
+    const { project } = await Project.find(configuration, this.context.cwd)
 
     const commandReport = await StreamReport.start(
       {

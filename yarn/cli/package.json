@@ -16,6 +16,7 @@
     "@lmpx/yarn-plugin-ci": "workspace:1.0.0",
     "@lmpx/yarn-plugin-files": "workspace:1.0.0",
     "@lmpx/yarn-plugin-lib": "workspace:1.0.0",
+    "@lmpx/yarn-plugin-lint": "workspace:1.0.0",
     "@lmpx/yarn-plugin-self": "workspace:1.0.0",
     "@lmpx/yarn-plugin-tspace": "workspace:1.0.0",
     "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0",
@@ -65,6 +66,7 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
+        "@lmpx/yarn-plugin-lint",
         "@lmpx/yarn-plugin-lib",
         "@lmpx/yarn-plugin-workspaces",
         "@lmpx/yarn-plugin-files",

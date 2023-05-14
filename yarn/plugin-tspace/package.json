@@ -21,8 +21,8 @@
     "@yarnpkg/fslib": "^3.0.0-rc.43"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.42",
-    "@yarnpkg/core": "^4.0.0-rc.42",
-    "@yarnpkg/fslib": "^3.0.0-rc.42"
+    "@yarnpkg/cli": "^4.0.0-rc.43",
+    "@yarnpkg/core": "^4.0.0-rc.43",
+    "@yarnpkg/fslib": "^3.0.0-rc.43"
   }
 }

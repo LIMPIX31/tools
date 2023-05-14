@@ -1,0 +1,27 @@
+{
+  "name": "@lmpx-code/lint",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@lmpx-config/eslint": "workspace:*",
+    "eslint": "^8.40.0",
+    "globby": "^13.1.4",
+    "ignore": "^5.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.4"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "typescript": "*"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  }
+}

@@ -78,12 +78,7 @@
       }
     ],
     "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        "functions": true,
-        "classes": true,
-        "variables": true
-      }
+      "off"
     ],
     "quotes": 0,
     "@typescript-eslint/quotes": 0,
@@ -202,17 +197,7 @@
       "error"
     ],
     "@typescript-eslint/indent": "off",
-    "no-shadow": [
-      "error",
-      {
-        "allow": [
-          "ClientFactory",
-          "ServerBuilder"
-        ],
-        "builtinGlobals": false,
-        "hoist": "functions"
-      }
-    ],
+    "no-shadow": "off",
     "curly": 0,
     "lines-around-comment": 0,
     "max-len": 0,
@@ -652,19 +637,7 @@
         "allowChildren": false
       }
     ],
-    "no-underscore-dangle": [
-      "error",
-      {
-        "allow": [
-          "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
-        ],
-        "allowAfterThis": false,
-        "allowAfterSuper": false,
-        "enforceInMethodNames": true,
-        "allowAfterThisConstructor": false,
-        "allowFunctionParams": true
-      }
-    ],
+    "no-underscore-dangle": "off",
     "react/display-name": [
       "off",
       {
@@ -1407,9 +1380,7 @@
     "newline-before-return": [
       "off"
     ],
-    "no-bitwise": [
-      "error"
-    ],
+    "no-bitwise": "off",
     "no-continue": [
       "error"
     ],
@@ -1426,13 +1397,13 @@
       "off"
     ],
     "no-nested-ternary": [
-      "error"
+      "off"
     ],
     "no-new-object": [
       "error"
     ],
     "no-plusplus": [
-      "error"
+      "off"
     ],
     "no-restricted-syntax": [
       "error",
@@ -1565,9 +1536,7 @@
     "no-async-promise-executor": [
       "error"
     ],
-    "no-await-in-loop": [
-      "error"
-    ],
+    "no-await-in-loop": "off",
     "no-compare-neg-zero": [
       "error"
     ],
@@ -1575,9 +1544,7 @@
       "error",
       "always"
     ],
-    "no-console": [
-      "warn"
-    ],
+    "no-console": "off",
     "no-constant-condition": [
       "warn"
     ],
@@ -1718,12 +1685,7 @@
     "consistent-return": [
       "error"
     ],
-    "default-case": [
-      "error",
-      {
-        "commentPattern": "^no default$"
-      }
-    ],
+    "default-case": "off",
     "default-case-last": [
       "error"
     ],
@@ -1882,9 +1844,7 @@
     "no-proto": [
       "error"
     ],
-    "no-redeclare": [
-      "error"
-    ],
+    "no-redeclare": "off",
     "no-restricted-properties": [
       "error",
       {

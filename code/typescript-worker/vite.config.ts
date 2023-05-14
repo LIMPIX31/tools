@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import { brotliCompressSync } from 'node:zlib'
-import path from 'node:path'
 
 export default defineConfig({
   build: {

@@ -8,6 +8,7 @@ import rules from './rules.js'
 
 export default [
   {
+    files: ['**/*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}'],
     rules,
     plugins: {
       react,

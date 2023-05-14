@@ -15,7 +15,6 @@ export const getEventCommmits = async () => {
     return getOctokit(process.env.GITHUB_TOKEN!).paginate(`GET ${url}`, context.repo)
   }
 
-  // eslint-disable-next-line no-console
   console.log(`Unknown event "${context.eventName}". Only "push" and "pull_request" supported.`)
 
   return []

@@ -28,14 +28,29 @@
     "jsx": "react",
     "noEmit": true,
     "paths": {
+      "@lmpx-cli/error-info-component": [
+        "cli/components/error-info"
+      ],
+      "@lmpx-cli/eslint-result-component": [
+        "cli/components/eslint-result"
+      ],
       "@lmpx-cli/source-frame-component": [
         "cli/components/source-frame"
+      ],
+      "@lmpx-cli/stack-trace-component": [
+        "cli/components/stack-trace"
       ],
       "@lmpx-cli/typescript-diagnostic-component": [
         "cli/components/typescript-diagnostic"
       ],
       "@lmpx-cli/renderer": [
         "cli/renderer"
+      ],
+      "@lmpx-code/lint": [
+        "code/lint"
+      ],
+      "@lmpx-code/lint-worker": [
+        "code/lint-worker"
       ],
       "@lmpx-code/typescript": [
         "code/typescript"
@@ -63,6 +78,9 @@
       ],
       "@lmpx/yarn-plugin-lib": [
         "yarn/plugin-lib"
+      ],
+      "@lmpx/yarn-plugin-lint": [
+        "yarn/plugin-lint"
       ],
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"

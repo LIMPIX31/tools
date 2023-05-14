@@ -1,0 +1,22 @@
+{
+  "name": "@lmpx-cli/error-info-component",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@lmpx-cli/stack-trace-component": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.4",
+    "@types/react": "^18.2.6",
+    "ink": "^3.2.0",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "ink": "^3.2.0",
+    "react": "18"
+  }
+}
