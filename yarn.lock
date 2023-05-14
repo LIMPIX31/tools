@@ -715,8 +715,10 @@ __metadata:
     "@actions/core": "npm:^1.10.0"
     "@actions/github": "npm:^5.1.1"
     "@babel/code-frame": "npm:^7.21.4"
+    "@lmpx-cli/eslint-result-component": "workspace:*"
     "@lmpx-cli/renderer": "workspace:*"
     "@lmpx-cli/typescript-diagnostic-component": "workspace:*"
+    "@lmpx-code/lint-worker": "workspace:*"
     "@lmpx-code/typescript": "workspace:*"
     "@lmpx-code/typescript-worker": "workspace:*"
     "@octokit/types": "npm:^9.2.2"
@@ -725,6 +727,7 @@ __metadata:
     "@yarnpkg/cli": "npm:^4.0.0-rc.43"
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
     "@yarnpkg/fslib": "npm:^3.0.0-rc.43"
+    eslint: "npm:^8.40.0"
     react: "npm:^18.2.0"
   peerDependencies:
     "@yarnpkg/cli": ^4.0.0-rc.42

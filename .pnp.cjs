@@ -110,7 +110,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@lmpx-cli/error-info-component", ["virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/error-info", "workspace:cli/components/error-info"]],\
-    ["@lmpx-cli/eslint-result-component", ["virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/eslint-result", "workspace:cli/components/eslint-result"]],\
+    ["@lmpx-cli/eslint-result-component", ["virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result", "workspace:cli/components/eslint-result"]],\
     ["@lmpx-cli/renderer", ["workspace:cli/renderer"]],\
     ["@lmpx-cli/source-frame-component", ["virtual:1bc9ffdd2a9f43836d746452481bd3fafb6d7e9de243052bb412f9fb79aa58122f02ef10bff2290f1ea917c3f462eeb0bad58618bab55a15c8393846fda44957#workspace:cli/components/source-frame", "virtual:28a5581b2f03c229b5d629aeca1673c4605bf997f738a4bed22ea9a39502b0498f7bfa066e96efa7cc4a2a0420fb7310aa7159300c314e2ee6835b89feeb7ec9#workspace:cli/components/source-frame", "workspace:cli/components/source-frame"]],\
     ["@lmpx-cli/stack-trace-component", ["virtual:613daf822a6e817cb6e15044a423fb754adff8d01e1936e6d3ccd888c61c21707ba0dffcb53e45a64482074265e71c0cdae2a7e96e6ea1fc3dcab644d6d72931#workspace:cli/components/stack-trace", "workspace:cli/components/stack-trace"]],\
@@ -769,10 +769,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@lmpx-cli/eslint-result-component", [\
-      ["virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/eslint-result", {\
-        "packageLocation": "./.yarn/__virtual__/@lmpx-cli-eslint-result-component-virtual-6252d2c5e5/1/cli/components/eslint-result/",\
+      ["virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result", {\
+        "packageLocation": "./.yarn/__virtual__/@lmpx-cli-eslint-result-component-virtual-503d215eb4/1/cli/components/eslint-result/",\
         "packageDependencies": [\
-          ["@lmpx-cli/eslint-result-component", "virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/eslint-result"],\
+          ["@lmpx-cli/eslint-result-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result"],\
           ["@lmpx-cli/renderer", "workspace:cli/renderer"],\
           ["@lmpx-cli/source-frame-component", "virtual:28a5581b2f03c229b5d629aeca1673c4605bf997f738a4bed22ea9a39502b0498f7bfa066e96efa7cc4a2a0420fb7310aa7159300c314e2ee6835b89feeb7ec9#workspace:cli/components/source-frame"],\
           ["@types/eslint", "npm:8.37.0"],\
@@ -791,6 +791,7 @@ const RAW_RUNTIME_STATE =
           "@types/yarnpkg__core",\
           "@types/yarnpkg__fslib",\
           "@yarnpkg/core",\
+          "@yarnpkg/fslib",\
           "react"\
         ],\
         "linkType": "SOFT"\
@@ -1152,8 +1153,10 @@ const RAW_RUNTIME_STATE =
           ["@actions/core", "npm:1.10.0"],\
           ["@actions/github", "npm:5.1.1"],\
           ["@babel/code-frame", "npm:7.21.4"],\
+          ["@lmpx-cli/eslint-result-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result"],\
           ["@lmpx-cli/renderer", "workspace:cli/renderer"],\
           ["@lmpx-cli/typescript-diagnostic-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/typescript-diagnostic"],\
+          ["@lmpx-code/lint-worker", "workspace:code/lint-worker"],\
           ["@lmpx-code/typescript", "workspace:code/typescript"],\
           ["@lmpx-code/typescript-worker", "workspace:code/typescript-worker"],\
           ["@octokit/types", "npm:9.2.2"],\
@@ -1165,6 +1168,7 @@ const RAW_RUNTIME_STATE =
           ["@yarnpkg/cli", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#npm:4.0.0-rc.43"],\
           ["@yarnpkg/core", "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch::version=4.0.0-rc.42&hash=61ba76"],\
           ["@yarnpkg/fslib", "npm:3.0.0-rc.43"],\
+          ["eslint", "npm:8.40.0"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -1184,8 +1188,10 @@ const RAW_RUNTIME_STATE =
           ["@actions/core", "npm:1.10.0"],\
           ["@actions/github", "npm:5.1.1"],\
           ["@babel/code-frame", "npm:7.21.4"],\
+          ["@lmpx-cli/eslint-result-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result"],\
           ["@lmpx-cli/renderer", "workspace:cli/renderer"],\
           ["@lmpx-cli/typescript-diagnostic-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/typescript-diagnostic"],\
+          ["@lmpx-code/lint-worker", "workspace:code/lint-worker"],\
           ["@lmpx-code/typescript", "workspace:code/typescript"],\
           ["@lmpx-code/typescript-worker", "workspace:code/typescript-worker"],\
           ["@octokit/types", "npm:9.2.2"],\
@@ -1194,6 +1200,7 @@ const RAW_RUNTIME_STATE =
           ["@yarnpkg/cli", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#npm:4.0.0-rc.43"],\
           ["@yarnpkg/core", "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch::version=4.0.0-rc.42&hash=61ba76"],\
           ["@yarnpkg/fslib", "npm:3.0.0-rc.43"],\
+          ["eslint", "npm:8.40.0"],\
           ["react", "npm:18.2.0"]\
         ],\
         "linkType": "SOFT"\
@@ -1288,7 +1295,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@lmpx/yarn-plugin-lint", "virtual:d2afc67f9db83056d34a8c26e154be0f8c5918e0ad7d6477cc82b83e95799508d7ce479db4b158cbcb0021ab2c4d4d49da648196ba88aa73ce18a6cbe07aaee8#workspace:yarn/plugin-lint"],\
           ["@lmpx-cli/error-info-component", "virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/error-info"],\
-          ["@lmpx-cli/eslint-result-component", "virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/eslint-result"],\
+          ["@lmpx-cli/eslint-result-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result"],\
           ["@lmpx-cli/renderer", "workspace:cli/renderer"],\
           ["@lmpx-code/lint-worker", "workspace:code/lint-worker"],\
           ["@types/yarnpkg__cli", null],\
@@ -1313,7 +1320,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@lmpx/yarn-plugin-lint", "workspace:yarn/plugin-lint"],\
           ["@lmpx-cli/error-info-component", "virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/error-info"],\
-          ["@lmpx-cli/eslint-result-component", "virtual:3a4d07f3b34897f1f6d7344599515682c95d567bc52f5fa2229bb8a81e8755508745b6043bc6423a78778ee15a1cda7640da9d367cf7aa475140016d37c7c6ad#workspace:cli/components/eslint-result"],\
+          ["@lmpx-cli/eslint-result-component", "virtual:a9d9837094791d36cfe3c4e99196f24d44c02d1d927a29f6ab96276abdac6bae7c0edbcf4b7635420e04682cdbe5d3433b11b9158c82c9524e8ecc011dd3242d#workspace:cli/components/eslint-result"],\
           ["@lmpx-cli/renderer", "workspace:cli/renderer"],\
           ["@lmpx-code/lint-worker", "workspace:code/lint-worker"],\
           ["@yarnpkg/builder", "npm:4.0.0-rc.43"],\
