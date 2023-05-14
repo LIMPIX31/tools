@@ -22,3 +22,8 @@ jobs:
         run: yarn ci typecheck
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Lint
+        run: yarn ci lint
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

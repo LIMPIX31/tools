@@ -1,9 +1,10 @@
 {
   "name": "tools",
   "packageManager": "yarn@4.0.0-rc.43",
+  "type": "module",
   "private": true,
   "scripts": {
-    "build": "yarn workspace @lmpx/yarn-cli build && cp ./yarn/cli/bundles/yarn.js ./.yarn/releases/"
+    "build": "yarn workspace @lmpx/yarn-cli build && cp ./yarn/cli/bundles/yarn.js ./.yarn/releases/yarn.cjs"
   },
   "workspaces": [
     "yarn/**/*",
@@ -12,7 +13,7 @@
     "config/**/*"
   ],
   "devDependencies": {
-    "@lmpx-config/eslint": "0.0.4",
+    "@lmpx-config/eslint": "npm:0.0.4",
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
     "typescript": "^5.0.4"
