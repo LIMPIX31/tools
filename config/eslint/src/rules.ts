@@ -1188,7 +1188,7 @@ const rules: Linter.RulesRecord = {
   'no-empty-pattern': ['error'],
   'no-eq-null': ['off'],
   'no-eval': ['error'],
-  'no-extend-native': ['error'],
+  'no-extend-native': ['off'],
   'no-extra-bind': ['error'],
   'no-extra-label': ['error'],
   'no-fallthrough': ['error'],
@@ -1229,23 +1229,7 @@ const rules: Linter.RulesRecord = {
   'no-octal': ['error'],
   'no-octal-escape': ['error'],
   'no-param-reassign': [
-    'error',
-    {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'acc',
-        'accumulator',
-        'e',
-        'ctx',
-        'context',
-        'req',
-        'request',
-        'res',
-        'response',
-        '$scope',
-        'staticContext',
-      ],
-    },
+    'off'
   ],
   'no-proto': ['error'],
   'no-redeclare': ['off'],

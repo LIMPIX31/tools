@@ -1,4 +1,4 @@
-{
+  {
   "rules": {
     "no-undef": [
       "off"
@@ -1742,7 +1742,7 @@
       "error"
     ],
     "no-extend-native": [
-      "error"
+      "off"
     ],
     "no-extra-bind": [
       "error"
@@ -1818,23 +1818,7 @@
       "error"
     ],
     "no-param-reassign": [
-      "error",
-      {
-        "props": true,
-        "ignorePropertyModificationsFor": [
-          "acc",
-          "accumulator",
-          "e",
-          "ctx",
-          "context",
-          "req",
-          "request",
-          "res",
-          "response",
-          "$scope",
-          "staticContext"
-        ]
-      }
+      "off"
     ],
     "no-proto": [
       "error"
