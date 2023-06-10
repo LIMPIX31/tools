@@ -9,10 +9,10 @@
     "@lmpx-cli/source-frame-component": "workspace:*"
   },
   "devDependencies": {
-    "@types/react": "^18.2.6",
+    "@types/react": "^18.2.9",
     "ink": "^3.2.0",
     "react": "^18.2.0",
-    "strip-ansi": "^7.0.1"
+    "strip-ansi": "^7.1.0"
   },
   "peerDependencies": {
     "ink": "^3.2.0",

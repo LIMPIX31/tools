@@ -15,13 +15,13 @@
   "dependencies": {
     "@lmpx/yarn-plugin-files": "workspace:*",
     "@lmpx/yarn-workspace-utils": "workspace:*",
-    "clipanion": "^3.2.0"
+    "clipanion": "^3.2.1"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.43",
-    "@yarnpkg/cli": "^4.0.0-rc.43",
+    "@yarnpkg/builder": "^4.0.0-rc.45",
+    "@yarnpkg/cli": "^4.0.0-rc.45",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   },
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.43",

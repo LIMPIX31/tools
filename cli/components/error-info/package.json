@@ -10,8 +10,8 @@
     "@lmpx-cli/stack-trace-component": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.1.4",
-    "@types/react": "^18.2.6",
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.9",
     "ink": "^3.2.0",
     "react": "^18.2.0"
   },

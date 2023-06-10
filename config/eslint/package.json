@@ -14,9 +14,9 @@
     "postpack": "rm -rf ./dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.5",
-    "@typescript-eslint/parser": "^5.59.5",
-    "eslint": "^8.40.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -27,8 +27,8 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.37.0",
-    "@types/node": "^20.1.4"
+    "@types/eslint": "^8.40.0",
+    "@types/node": "^20.2.5"
   },
   "publishConfig": {
     "access": "public",

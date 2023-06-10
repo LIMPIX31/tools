@@ -21,13 +21,13 @@
     "@lmpx-cli/eslint-result-component": "workspace:*",
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-code/lint-worker": "workspace:*",
-    "@octokit/types": "^9.2.2",
-    "@types/node": "^20.1.4",
-    "@yarnpkg/builder": "^4.0.0-rc.43",
-    "@yarnpkg/cli": "^4.0.0-rc.43",
+    "@octokit/types": "^9.2.3",
+    "@types/node": "^20.2.5",
+    "@yarnpkg/builder": "^4.0.0-rc.45",
+    "@yarnpkg/cli": "^4.0.0-rc.45",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
-    "@yarnpkg/fslib": "^3.0.0-rc.43",
-    "eslint": "^8.40.0"
+    "@yarnpkg/fslib": "^3.0.0-rc.45",
+    "eslint": "^8.42.0"
   },
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.42",
