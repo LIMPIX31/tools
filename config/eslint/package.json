@@ -27,8 +27,8 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.40.0",
-    "@types/node": "^20.2.5"
+    "@types/eslint": "^8.40.1",
+    "@types/node": "^20.2.6"
   },
   "publishConfig": {
     "access": "public",

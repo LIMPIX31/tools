@@ -19,7 +19,7 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.9",
+    "@types/react": "^18.2.10",
     "@yarnpkg/builder": "^4.0.0-rc.45",
     "@yarnpkg/cli": "^4.0.0-rc.45",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",

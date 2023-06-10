@@ -19,6 +19,6 @@
     "typescript": "5.0.2"
   },
   "resolutions": {
-    "@yarnpkg/core@npm:^4.0.0-rc.42": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch"
+    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.45#~/.yarn/patches/yarn-better-cli.patch"
   }
 }

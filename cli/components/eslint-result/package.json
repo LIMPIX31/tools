@@ -5,11 +5,11 @@
   "main": "src/index.ts",
   "dependencies": {
     "@lmpx-cli/source-frame-component": "workspace:*",
-    "@types/eslint": "^8.40.0"
+    "@types/eslint": "^8.40.1"
   },
   "devDependencies": {
     "@lmpx-cli/renderer": "workspace:*",
-    "@types/react": "^18.2.9",
+    "@types/react": "^18.2.10",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
     "@yarnpkg/fslib": "^3.0.0-rc.45",
     "ink": "^3.2.0",
