@@ -14,7 +14,7 @@
     "@lmpx-cli/eslint-result-component": "workspace:*",
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-code/lint-worker": "workspace:*",
-    "clipanion": "^3.2.1",
+    "clipanion": "3.2.0",
     "react": "^18.2.0"
   },
   "devDependencies": {

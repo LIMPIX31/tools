@@ -12,7 +12,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "clipanion": "^3.2.1"
+    "clipanion": "3.2.0"
   },
   "devDependencies": {
     "@yarnpkg/builder": "^4.0.0-rc.45",
