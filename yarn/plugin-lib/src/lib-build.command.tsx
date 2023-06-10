@@ -40,8 +40,8 @@ export class LibBuildCommand extends BaseCommand {
 
         await report.startTimerPromise('Building', async () => {
           const module: any = this.format
-            ?.replaceAll('cjs', 'commonjs')
-            ?.replaceAll('esm', 'esnext')
+            ?.replaceAll?.('cjs', 'commonjs')
+            ?.replaceAll?.('esm', 'esnext')
             ?? 'esnext'
 
           const diagnostics = await build({
