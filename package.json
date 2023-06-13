@@ -20,5 +20,6 @@
   },
   "resolutions": {
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.45#~/.yarn/patches/yarn-better-cli.patch"
-  }
+  },
+  "tsconfigWorkspaces": true
 }

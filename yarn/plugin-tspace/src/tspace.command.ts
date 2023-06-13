@@ -1,5 +1,5 @@
 import { BaseCommand } from '@yarnpkg/cli'
-import { Configuration, MessageName, Project, StreamReport } from '@yarnpkg/core'
+import { Configuration, MessageName, Project, StreamReport, structUtils } from '@yarnpkg/core'
 import { xfs, ppath } from '@yarnpkg/fslib'
 
 export class TspaceCommand extends BaseCommand {
@@ -25,11 +25,7 @@ export class TspaceCommand extends BaseCommand {
 
             project.workspaces.filter(ws => ws.cwd !== this.context.cwd).forEach(({ relativeCwd, manifest: { name } })=> {
               if (name) {
-                const fullName = name.scope ? `@${name.scope}/${name.name}` : name.name
-
-                report.reportInfo(MessageName.UNNAMED, `Link ${fullName} -> ${relativeCwd}`)
-
-                paths[fullName] = [relativeCwd]
+                paths[structUtils.stringifyIdent(name)] = [relativeCwd]
               }
             })
 
