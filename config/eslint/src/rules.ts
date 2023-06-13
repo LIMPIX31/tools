@@ -6,7 +6,7 @@ const rules: Linter.RulesRecord = {
     {
       tabWidth: 2,
       semi: false,
-      arrowParens: 'avoid',
+      arrowParens: 'always',
       singleQuote: true,
       trailingComma: 'all',
       endOfLine: 'lf',

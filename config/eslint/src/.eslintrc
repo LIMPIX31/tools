@@ -3,7 +3,7 @@
     "prettier/prettier": ["error", {
       "tabWidth": 2,
       "semi": false,
-      "arrowParens": "avoid",
+      "arrowParens": "always",
       "singleQuote": true,
       "trailingComma": "all",
       "endOfLine": "lf",
