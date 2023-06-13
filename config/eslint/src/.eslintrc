@@ -1,5 +1,15 @@
   {
   "rules": {
+    "prettier/prettier": ["error", {
+      "tabWidth": 2,
+      "semi": false,
+      "arrowParens": "avoid",
+      "singleQuote": true,
+      "trailingComma": "all",
+      "endOfLine": "lf",
+      "printWidth": 120,
+      "jsxSingleQuote": true
+    }],
     "no-undef": [
       "off"
     ],
@@ -1708,8 +1718,7 @@
       "error"
     ],
     "max-classes-per-file": [
-      "error",
-      1
+      "off"
     ],
     "no-alert": [
       "warn"

@@ -4,6 +4,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
+import prettier from 'eslint-plugin-prettier'
 import rules from './rules.js'
 
 export default [
@@ -12,6 +13,7 @@ export default [
     rules,
     plugins: {
       react,
+      prettier,
       'jsx-a11y': jsxA11y,
       'react-hooks': reactHooks,
       '@typescript-eslint': typescriptEslint,

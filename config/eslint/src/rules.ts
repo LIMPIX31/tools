@@ -1,6 +1,19 @@
 import type { Linter } from 'eslint'
 
 const rules: Linter.RulesRecord = {
+  'prettier/prettier': [
+    'error',
+    {
+      tabWidth: 2,
+      semi: false,
+      arrowParens: 'avoid',
+      singleQuote: true,
+      trailingComma: 'all',
+      endOfLine: 'lf',
+      printWidth: 120,
+      jsxSingleQuote: true,
+    },
+  ],
   'no-undef': ['off'],
   'brace-style': 'off',
   '@typescript-eslint/brace-style': 'off',
@@ -842,13 +855,11 @@ const rules: Linter.RulesRecord = {
     'error',
     {
       name: 'isFinite',
-      message:
-        'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+      message: 'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
     },
     {
       name: 'isNaN',
-      message:
-        'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+      message: 'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
     },
     'addEventListener',
     'blur',
@@ -1022,13 +1033,11 @@ const rules: Linter.RulesRecord = {
     },
     {
       selector: 'LabeledStatement',
-      message:
-        'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+      message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
     },
     {
       selector: 'WithStatement',
-      message:
-        '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+      message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
     },
   ],
   'no-ternary': ['off'],
@@ -1173,7 +1182,7 @@ const rules: Linter.RulesRecord = {
   ],
   'grouped-accessor-pairs': ['error'],
   'guard-for-in': ['error'],
-  'max-classes-per-file': ['error', 1],
+  'max-classes-per-file': ['off'],
   'no-alert': ['warn'],
   'no-caller': ['error'],
   'no-case-declarations': ['error'],
@@ -1228,9 +1237,7 @@ const rules: Linter.RulesRecord = {
   'no-nonoctal-decimal-escape': ['error'],
   'no-octal': ['error'],
   'no-octal-escape': ['error'],
-  'no-param-reassign': [
-    'off'
-  ],
+  'no-param-reassign': ['off'],
   'no-proto': ['error'],
   'no-redeclare': ['off'],
   'no-restricted-properties': [
