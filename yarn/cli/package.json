@@ -66,13 +66,8 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
-        "@lmpx/yarn-plugin-lint",
         "@lmpx/yarn-plugin-lib",
-        "@lmpx/yarn-plugin-workspaces",
-        "@lmpx/yarn-plugin-files",
         "@lmpx/yarn-plugin-self",
-        "@lmpx/yarn-plugin-ci",
-        "@lmpx/yarn-plugin-typecheck",
         "@lmpx/yarn-plugin-tspace",
         "@yarnpkg/plugin-interactive-tools",
         "@yarnpkg/plugin-workspace-tools",
