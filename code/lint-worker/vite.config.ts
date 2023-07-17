@@ -14,7 +14,7 @@ export default defineConfig({
         format: 'cjs',
         entryFileNames: 'linter.worker.content.js',
       },
-      external: ['pnpapi', "eslint", 'typescript', /^node:.*/, 'fs', 'path', 'module', 'assert', 'os', 'util', 'crypto', 'url', 'stream', 'events'],
+      external: ['pnpapi', "eslint", 'typescript', /^node:.*/, 'fs', 'path', 'module', 'assert', 'os', 'util', 'crypto', 'url', 'stream', 'events', 'child_process', 'buffer'],
     },
   },
   plugins: [

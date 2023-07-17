@@ -13,10 +13,11 @@
     "config/**/*"
   ],
   "devDependencies": {
-    "@lmpx-config/eslint": "0.0.6",
-    "eslint": "^8.42.0",
+    "@lmpx-config/eslint": "0.0.8",
+    "eslint": "^8.45.0",
     "husky": "^8.0.3",
-    "typescript": "5.0.2"
+    "prettier": "^3.0.0",
+    "typescript": "5.1.6"
   },
   "resolutions": {
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.45#~/.yarn/patches/yarn-better-cli.patch"

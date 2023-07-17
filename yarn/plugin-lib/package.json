@@ -16,10 +16,10 @@
     "rimraf": "^5.0.1"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.45",
-    "@yarnpkg/cli": "^4.0.0-rc.45",
+    "@yarnpkg/builder": "^4.0.0-rc.48",
+    "@yarnpkg/cli": "^4.0.0-rc.48",
     "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
-    "@yarnpkg/fslib": "^3.0.0-rc.45"
+    "@yarnpkg/fslib": "^3.0.0-rc.48"
   },
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.42",
