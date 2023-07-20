@@ -1698,11 +1698,7 @@
       "off"
     ],
     "dot-notation": [
-      "error",
-      {
-        "allowKeywords": true,
-        "allowPattern": ""
-      }
+      "off"
     ],
     "eqeqeq": [
       "error",

@@ -1,4 +1,5 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
+// @ts-ignore
 import parser from '@typescript-eslint/parser'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import react from 'eslint-plugin-react'

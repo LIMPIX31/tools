@@ -1167,11 +1167,7 @@ const rules: Linter.RulesRecord = {
   'default-case-last': ['error'],
   'default-param-last': ['off'],
   'dot-notation': [
-    'error',
-    {
-      allowKeywords: true,
-      allowPattern: '',
-    },
+    'off',
   ],
   eqeqeq: [
     'error',
