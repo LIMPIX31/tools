@@ -1,0 +1,26 @@
+{
+  "name": "@lmpx-config/vite-service",
+  "main": "src/index.ts",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn lib build esm",
+    "prepack": "yarn build",
+    "postpack": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "vite": "^4.4.9",
+    "vite-plugin-node": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

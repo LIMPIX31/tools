@@ -54,6 +54,9 @@
       "@lmpx-code/lint-worker": [
         "code/lint-worker"
       ],
+      "@lmpx-code/pnpapi-worker": [
+        "code/pnpapi-worker"
+      ],
       "@lmpx-code/typescript": [
         "code/typescript"
       ],
@@ -68,6 +71,9 @@
       ],
       "@lmpx-config/prettier": [
         "config/prettier"
+      ],
+      "@lmpx-config/vite-service": [
+        "config/vite/config-service"
       ],
       "@lmpx/yarn-cli": [
         "yarn/cli"
@@ -86,6 +92,9 @@
       ],
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"
+      ],
+      "@lmpx/yarn-plugin-service": [
+        "yarn/plugin-service"
       ],
       "@lmpx/yarn-plugin-typecheck": [
         "yarn/plugin-typecheck"

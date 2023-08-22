@@ -18,6 +18,7 @@
     "@lmpx/yarn-plugin-lib": "workspace:^",
     "@lmpx/yarn-plugin-lint": "workspace:^",
     "@lmpx/yarn-plugin-self": "workspace:^",
+    "@lmpx/yarn-plugin-service": "workspace:^",
     "@lmpx/yarn-plugin-tsconfig-workspaces": "workspace:^",
     "@lmpx/yarn-plugin-typecheck": "workspace:^",
     "@lmpx/yarn-plugin-workspaces": "workspace:^",
@@ -72,6 +73,7 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
+        "@lmpx/yarn-plugin-service",
         "@lmpx/yarn-plugin-tsconfig-workspaces",
         "@lmpx/yarn-plugin-workspaces",
         "@lmpx/yarn-plugin-typecheck",

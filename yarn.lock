@@ -650,6 +650,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lmpx-code/pnpapi-worker@workspace:^, @lmpx-code/pnpapi-worker@workspace:code/pnpapi-worker":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-code/pnpapi-worker@workspace:code/pnpapi-worker"
+  dependencies:
+    vite: "npm:^4.4.9"
+  languageName: unknown
+  linkType: soft
+
 "@lmpx-code/typescript-worker@workspace:*, @lmpx-code/typescript-worker@workspace:code/typescript-worker":
   version: 0.0.0-use.local
   resolution: "@lmpx-code/typescript-worker@workspace:code/typescript-worker"
@@ -709,6 +717,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@lmpx-config/vite-service@workspace:config/vite/config-service":
+  version: 0.0.0-use.local
+  resolution: "@lmpx-config/vite-service@workspace:config/vite/config-service"
+  dependencies:
+    "@types/node": "npm:^20.5.2"
+    vite: "npm:^4.4.9"
+    vite-plugin-node: "npm:^3.0.2"
+  languageName: unknown
+  linkType: soft
+
 "@lmpx/yarn-cli@workspace:yarn/cli":
   version: 0.0.0-use.local
   resolution: "@lmpx/yarn-cli@workspace:yarn/cli"
@@ -718,6 +736,7 @@ __metadata:
     "@lmpx/yarn-plugin-lib": "workspace:^"
     "@lmpx/yarn-plugin-lint": "workspace:^"
     "@lmpx/yarn-plugin-self": "workspace:^"
+    "@lmpx/yarn-plugin-service": "workspace:^"
     "@lmpx/yarn-plugin-tsconfig-workspaces": "workspace:^"
     "@lmpx/yarn-plugin-typecheck": "workspace:^"
     "@lmpx/yarn-plugin-workspaces": "workspace:^"
@@ -857,6 +876,20 @@ __metadata:
   resolution: "@lmpx/yarn-plugin-self@workspace:yarn/plugin-self"
   dependencies:
     "@yarnpkg/builder": "npm:^4.0.0-rc.49"
+    "@yarnpkg/cli": "npm:^4.0.0-rc.49"
+    "@yarnpkg/core": "npm:^4.0.0-rc.49"
+    clipanion: "npm:^4.0.0-rc.2"
+  peerDependencies:
+    "@yarnpkg/cli": ^4.0.0-rc.49
+    "@yarnpkg/core": ^4.0.0-rc.49
+  languageName: unknown
+  linkType: soft
+
+"@lmpx/yarn-plugin-service@workspace:^, @lmpx/yarn-plugin-service@workspace:yarn/plugin-service":
+  version: 0.0.0-use.local
+  resolution: "@lmpx/yarn-plugin-service@workspace:yarn/plugin-service"
+  dependencies:
+    "@lmpx-code/pnpapi-worker": "workspace:^"
     "@yarnpkg/cli": "npm:^4.0.0-rc.49"
     "@yarnpkg/core": "npm:^4.0.0-rc.49"
     clipanion: "npm:^4.0.0-rc.2"
@@ -1122,6 +1155,16 @@ __metadata:
     picocolors: "npm:^1.0.0"
     tslib: "npm:^2.6.0"
   checksum: f0b0b305a83bd65fac5637d28ad3e33f19194043e03ceef6b4e13d260bfa2678b73df76dc56ed906469ffe0494d4bd214e6b92ca80684f38547982edf982dd15
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^4.1.1":
+  version: 4.2.1
+  resolution: "@rollup/pluginutils@npm:4.2.1"
+  dependencies:
+    estree-walker: "npm:^2.0.1"
+    picomatch: "npm:^2.2.2"
+  checksum: 503a6f0a449e11a2873ac66cfdfb9a3a0b77ffa84c5cad631f5e4bc1063c850710e8d5cd5dab52477c0d66cda2ec719865726dbe753318cd640bab3fff7ca476
   languageName: node
   linkType: hard
 
@@ -2585,7 +2628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -3576,6 +3619,13 @@ __metadata:
   version: 5.3.0
   resolution: "estraverse@npm:5.3.0"
   checksum: 37cbe6e9a68014d34dbdc039f90d0baf72436809d02edffcc06ba3c2a12eb298048f877511353b130153e532aac8d68ba78430c0dd2f44806ebc7c014b01585e
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "estree-walker@npm:2.0.2"
+  checksum: b02109c5d46bc2ed47de4990eef770f7457b1159a229f0999a09224d2b85ffeed2d7679cffcff90aeb4448e94b0168feb5265b209cdec29aad50a3d6e93d21e2
   languageName: node
   linkType: hard
 
@@ -5537,7 +5587,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.3.1":
+"picomatch@npm:^2.2.2, picomatch@npm:^2.3.1":
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 60c2595003b05e4535394d1da94850f5372c9427ca4413b71210f437f7b2ca091dbd611c45e8b37d10036fa8eade25c1b8951654f9d3973bfa66a2ff4d3b08bc
@@ -6460,6 +6510,7 @@ __metadata:
     husky: "npm:^8.0.3"
     prettier: "npm:^3.0.2"
     typescript: "npm:5.1.6"
+    vite: "npm:^4.4.9"
   languageName: unknown
   linkType: soft
 
@@ -6769,6 +6820,23 @@ __metadata:
   version: 3.0.1
   resolution: "v8-compile-cache-lib@npm:3.0.1"
   checksum: 88d3423a52b6aaf1836be779cab12f7016d47ad8430dffba6edf766695e6d90ad4adaa3d8eeb512cc05924f3e246c4a4ca51e089dccf4402caa536b5e5be8961
+  languageName: node
+  linkType: hard
+
+"vite-plugin-node@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "vite-plugin-node@npm:3.0.2"
+  dependencies:
+    "@rollup/pluginutils": "npm:^4.1.1"
+    chalk: "npm:^4.1.2"
+    debug: "npm:^4.3.2"
+  peerDependencies:
+    "@swc/core": ^1.2.153
+    vite: ^4.0.0
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+  checksum: a459e1c4c0b306fa046f6a973f97c8520c7fb6aaf30549107c5e6d8aed1ec4bfae52ffe8e4e224fadae473a96fd259da592d0cb878bfea6a7f1519a313d9f3f1
   languageName: node
   linkType: hard
 
