@@ -11,7 +11,7 @@
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-cli/typescript-diagnostic-component": "workspace:*",
     "@lmpx-code/typescript-worker": "workspace:*",
-    "clipanion": "^4.0.0-rc.2",
+    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch",
     "react": "^18.2.0",
     "rimraf": "^5.0.1",
     "tslib": "^2.4.0"

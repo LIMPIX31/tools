@@ -13,13 +13,13 @@
     "postpatch": "node patches/post.js"
   },
   "dependencies": {
-    "@lmpx/yarn-plugin-ci": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-files": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-lib": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-lint": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-self": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-typecheck": "workspace:1.0.0",
-    "@lmpx/yarn-plugin-workspaces": "workspace:1.0.0",
+    "@lmpx/yarn-plugin-ci": "workspace:^",
+    "@lmpx/yarn-plugin-files": "workspace:^",
+    "@lmpx/yarn-plugin-lib": "workspace:^",
+    "@lmpx/yarn-plugin-lint": "workspace:^",
+    "@lmpx/yarn-plugin-self": "workspace:^",
+    "@lmpx/yarn-plugin-typecheck": "workspace:^",
+    "@lmpx/yarn-plugin-workspaces": "workspace:^",
     "@yarnpkg/builder": "^4.0.0-rc.49",
     "@yarnpkg/cli": "^4.0.0-rc.49",
     "@yarnpkg/core": "^4.0.0-rc.49",
@@ -30,6 +30,7 @@
     "@yarnpkg/plugin-constraints": "^4.0.0-rc.49",
     "@yarnpkg/plugin-dlx": "^4.0.0-rc.49",
     "@yarnpkg/plugin-essentials": "^4.0.0-rc.49",
+    "@yarnpkg/plugin-exec": "^3.0.0-rc.49",
     "@yarnpkg/plugin-file": "^3.0.0-rc.49",
     "@yarnpkg/plugin-git": "^3.0.0-rc.49",
     "@yarnpkg/plugin-github": "^3.0.0-rc.49",
@@ -48,13 +49,19 @@
     "@yarnpkg/plugin-typescript": "^4.0.0-rc.49",
     "@yarnpkg/plugin-version": "^4.0.0-rc.49",
     "@yarnpkg/plugin-workspace-tools": "^4.0.0-rc.49",
+    "@yarnpkg/pnpify": "^4.0.0-rc.49",
     "@yarnpkg/shell": "^4.0.0-rc.49",
     "ci-info": "^3.8.0",
-    "clipanion": "^4.0.0-rc.2",
+    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch",
     "semver": "^7.5.4",
     "tslib": "^2.6.2",
     "typanion": "^3.14.0",
     "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   },
   "publishConfig": {
     "access": "public",
@@ -64,23 +71,21 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
+        "@lmpx/yarn-plugin-workspaces",
         "@lmpx/yarn-plugin-typecheck",
         "@lmpx/yarn-plugin-lib",
         "@lmpx/yarn-plugin-self",
-        "@yarnpkg/plugin-constraints",
-        "@yarnpkg/plugin-stage",
-        "@yarnpkg/plugin-interactive-tools",
-        "@yarnpkg/plugin-workspace-tools",
-        "@yarnpkg/plugin-typescript",
-        "@yarnpkg/plugin-version",
         "@yarnpkg/plugin-essentials",
         "@yarnpkg/plugin-compat",
+        "@yarnpkg/plugin-constraints",
         "@yarnpkg/plugin-dlx",
+        "@yarnpkg/plugin-exec",
         "@yarnpkg/plugin-file",
         "@yarnpkg/plugin-git",
         "@yarnpkg/plugin-github",
         "@yarnpkg/plugin-http",
         "@yarnpkg/plugin-init",
+        "@yarnpkg/plugin-interactive-tools",
         "@yarnpkg/plugin-link",
         "@yarnpkg/plugin-nm",
         "@yarnpkg/plugin-npm",
@@ -88,7 +93,11 @@
         "@yarnpkg/plugin-pack",
         "@yarnpkg/plugin-patch",
         "@yarnpkg/plugin-pnp",
-        "@yarnpkg/plugin-pnpm"
+        "@yarnpkg/plugin-pnpm",
+        "@yarnpkg/plugin-stage",
+        "@yarnpkg/plugin-typescript",
+        "@yarnpkg/plugin-version",
+        "@yarnpkg/plugin-workspace-tools"
       ]
     }
   }

@@ -19,5 +19,10 @@
     "prettier": "^3.0.2",
     "typescript": "5.1.6"
   },
+  "resolutions": {
+    "typescript": "^5.1.6",
+    "eslint": "^8.47.0",
+    "clipanion@npm:^4.0.0-rc.2": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch"
+  },
   "tsconfigWorkspaces": true
 }

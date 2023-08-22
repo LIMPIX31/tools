@@ -1,0 +1,25 @@
+diff --git a/lib/advanced/options/utils.js b/lib/advanced/options/utils.js
+index c1a6d1fef87b058a377be4654f33c5a362a98ff0..b2cbd459a03dcfa53904c9ad77b924619047096b 100644
+--- a/lib/advanced/options/utils.js
++++ b/lib/advanced/options/utils.js
+@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
+ 
+ var errors = require('../../errors.js');
+ 
+-const isOptionSymbol = Symbol(`clipanion/isOption`);
++const isOptionSymbol = '__Symbol(clipanion/isOption)';
+ function makeCommandOption(spec) {
+     // We lie! But it's for the good cause: the cli engine will turn the specs into proper values after instantiation.
+     return { ...spec, [isOptionSymbol]: true };
+diff --git a/lib/advanced/options/utils.mjs b/lib/advanced/options/utils.mjs
+index 004b4e140f4597c9066f7fd9ec537bba3861bda9..6fa7cb019e869164493c5915bca0ac49b51e1ee9 100644
+--- a/lib/advanced/options/utils.mjs
++++ b/lib/advanced/options/utils.mjs
+@@ -1,6 +1,6 @@
+ import { UsageError } from '../../errors.mjs';
+ 
+-const isOptionSymbol = Symbol(`clipanion/isOption`);
++const isOptionSymbol = '__Symbol(clipanion/isOption)';
+ function makeCommandOption(spec) {
+     // We lie! But it's for the good cause: the cli engine will turn the specs into proper values after instantiation.
+     return { ...spec, [isOptionSymbol]: true };

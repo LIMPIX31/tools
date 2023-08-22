@@ -10,6 +10,9 @@
   "devDependencies": {
     "@yarnpkg/core": "^4.0.0-rc.49"
   },
+  "peerDependencies": {
+    "@yarnpkg/core": "^4.0.0-rc.49"
+  },
   "publishConfig": {
     "access": "public",
     "main": "dist/index.js",

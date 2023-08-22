@@ -14,13 +14,13 @@
   },
   "dependencies": {
     "@actions/github": "^5.1.1",
-    "@octokit/types": "^11.1.0",
-    "clipanion": "^4.0.0-rc.2"
+    "@octokit/types": "^11.1.0"
   },
   "devDependencies": {
     "@yarnpkg/builder": "^4.0.0-rc.49",
     "@yarnpkg/cli": "^4.0.0-rc.49",
-    "@yarnpkg/core": "^4.0.0-rc.49"
+    "@yarnpkg/core": "^4.0.0-rc.49",
+    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch"
   },
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.49",
