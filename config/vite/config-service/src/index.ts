@@ -18,7 +18,7 @@ export default defineConfig(async () => {
 	let packageJson = {}
 
 	try {
-		packageJson = readFile(packageJsonPath).then((json) => JSON.parse(json.toString('utf8')))
+		packageJson = await readFile(packageJsonPath).then((json) => JSON.parse(json.toString('utf8')))
 	} catch (e) {
 		logger.error('Invalid package.json')
 		process.exit(1)
