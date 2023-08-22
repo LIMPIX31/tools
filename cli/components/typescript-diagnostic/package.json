@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@lmpx-code/typescript": "workspace:*",
-    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
+    "@yarnpkg/core": "^4.0.0-rc.49",
     "ink": "^3.2.0",
     "react": "^18.2.0",
     "typescript": "~5.1.6"

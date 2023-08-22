@@ -15,20 +15,20 @@
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-cli/typescript-diagnostic-component": "workspace:*",
     "@lmpx-code/typescript-worker": "workspace:*",
-    "clipanion": "3.2.0",
+    "clipanion": "^4.0.0-rc.2",
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@yarnpkg/builder": "^4.0.0-rc.48",
-    "@yarnpkg/cli": "^4.0.0-rc.48",
-    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
-    "@yarnpkg/fslib": "^3.0.0-rc.48",
+    "@types/react": "^18.2.20",
+    "@yarnpkg/builder": "^4.0.0-rc.49",
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49",
+    "@yarnpkg/fslib": "^3.0.0-rc.49",
     "typescript": "~5.1.6"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.43",
-    "@yarnpkg/core": "^4.0.0-rc.43",
-    "@yarnpkg/fslib": "^3.0.0-rc.43"
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49",
+    "@yarnpkg/fslib": "^3.0.0-rc.49"
   }
 }

@@ -12,10 +12,10 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2"
+    "@types/node": "^20.5.1"
   },
   "publishConfig": {
     "access": "public",

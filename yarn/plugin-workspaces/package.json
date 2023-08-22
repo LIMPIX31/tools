@@ -15,17 +15,17 @@
   "dependencies": {
     "@lmpx/yarn-plugin-files": "workspace:*",
     "@lmpx/yarn-workspace-utils": "workspace:*",
-    "clipanion": "3.2.0"
+    "clipanion": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.48",
-    "@yarnpkg/cli": "^4.0.0-rc.48",
-    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
+    "@yarnpkg/builder": "^4.0.0-rc.49",
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49",
     "typescript": "~5.1.6"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.43",
-    "@yarnpkg/core": "^4.0.0-rc.43"
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49"
   },
   "publishConfig": {
     "access": "public",

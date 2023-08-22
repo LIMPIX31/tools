@@ -3,7 +3,7 @@ import type { ESLint } from 'eslint'
 import { Linter as ESLinter } from 'eslint'
 import { globby } from 'globby'
 import ignorer from 'ignore'
-import { join, relative } from 'path'
+import { join, relative } from 'node:path'
 import eslintconfig from '@lmpx-config/eslint'
 import { createPatterns, ignore } from './linter.patterns'
 

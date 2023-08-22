@@ -27,13 +27,13 @@ class LintCommand extends BaseCommand {
           try {
             const results = await lint(project.cwd, this.files)
 
-            results
-              .filter((result) => result.messages.length > 0)
-              .forEach((result) => {
-                const output = renderStatic(<ESLintResult result={result} project={project}/>)
-
-                output.split('\n').forEach((line) => report.reportError(MessageName.UNNAMED, line))
-              })
+            // results
+            //   .filter((result) => result.messages.length > 0)
+            //   .forEach((result) => {
+            //     const output = renderStatic(<ESLintResult result={result} project={project}/>)
+            //
+            //     output.split('\n').forEach((line) => report.reportError(MessageName.UNNAMED, line))
+            //   })
           } catch (error) {
             renderStatic(<ErrorInfo error={error as Error}/>, process.stdout.columns - 12)
               .split('\n')

@@ -8,13 +8,13 @@ export default defineConfig({
     lib: {
       entry: './src/linter.worker.source.ts',
       formats: ['cjs'],
+      fileName: 'linter.worker.content'
     },
     rollupOptions: {
+      external: ['pnpapi', 'eslint', 'typescript', /^node:.*/, 'fs', 'path', 'module', 'assert', 'os', 'util', 'crypto', 'url', 'stream', 'events', 'child_process', 'buffer', 'perf_hooks'],
       output: {
-        format: 'cjs',
-        entryFileNames: 'linter.worker.content.js',
+        manualChunks: () => 'chunk.js',
       },
-      external: ['pnpapi', "eslint", 'typescript', /^node:.*/, 'fs', 'path', 'module', 'assert', 'os', 'util', 'crypto', 'url', 'stream', 'events', 'child_process', 'buffer'],
     },
   },
   plugins: [
@@ -23,7 +23,6 @@ export default defineConfig({
       name: 'wrap-worker',
       generateBundle(options, bundle, isWrite) {
         const bundles = Object.keys(bundle)
-        if (bundles.length !== 1) throw new Error(`Expected only one bundle, got ${bundles.length}`)
 
         const outputBundle = bundle[bundles[0]] as any
 

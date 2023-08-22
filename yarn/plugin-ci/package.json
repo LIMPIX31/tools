@@ -10,7 +10,7 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "@babel/code-frame": "^7.22.5",
+    "@babel/code-frame": "^7.22.10",
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-cli/typescript-diagnostic-component": "workspace:*",
     "@lmpx-code/typescript": "workspace:*",
@@ -21,17 +21,17 @@
     "@lmpx-cli/eslint-result-component": "workspace:*",
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-code/lint-worker": "workspace:*",
-    "@octokit/types": "^9.3.2",
-    "@types/node": "^20.4.2",
-    "@yarnpkg/builder": "^4.0.0-rc.48",
-    "@yarnpkg/cli": "^4.0.0-rc.48",
-    "@yarnpkg/core": "patch:@yarnpkg/core@npm%3A4.0.0-rc.42#~/.yarn/patches/@yarnpkg-core-npm-4.0.0-rc.42-029d9f8b24.patch",
-    "@yarnpkg/fslib": "^3.0.0-rc.48",
-    "eslint": "^8.45.0"
+    "@octokit/types": "^11.1.0",
+    "@types/node": "^20.5.1",
+    "@yarnpkg/builder": "^4.0.0-rc.49",
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49",
+    "@yarnpkg/fslib": "^3.0.0-rc.49",
+    "eslint": "^8.47.0"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.42",
-    "@yarnpkg/core": "^4.0.0-rc.42",
-    "@yarnpkg/fslib": "^3.0.0-rc.42"
+    "@yarnpkg/cli": "^4.0.0-rc.49",
+    "@yarnpkg/core": "^4.0.0-rc.49",
+    "@yarnpkg/fslib": "^3.0.0-rc.49"
   }
 }
