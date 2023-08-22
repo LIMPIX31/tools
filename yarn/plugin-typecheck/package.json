@@ -15,6 +15,7 @@
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-cli/typescript-diagnostic-component": "workspace:*",
     "@lmpx-code/typescript-worker": "workspace:*",
+    "clipanion": "^4.0.0-rc.2",
     "react": "^18.2.0"
   },
   "devDependencies": {
@@ -23,7 +24,6 @@
     "@yarnpkg/cli": "^4.0.0-rc.49",
     "@yarnpkg/core": "^4.0.0-rc.49",
     "@yarnpkg/fslib": "^3.0.0-rc.49",
-    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch",
     "typescript": "~5.1.6"
   },
   "peerDependencies": {

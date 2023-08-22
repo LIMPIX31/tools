@@ -18,6 +18,7 @@
     "@lmpx/yarn-plugin-lib": "workspace:^",
     "@lmpx/yarn-plugin-lint": "workspace:^",
     "@lmpx/yarn-plugin-self": "workspace:^",
+    "@lmpx/yarn-plugin-tsconfig-workspaces": "workspace:^",
     "@lmpx/yarn-plugin-typecheck": "workspace:^",
     "@lmpx/yarn-plugin-workspaces": "workspace:^",
     "@yarnpkg/builder": "^4.0.0-rc.49",
@@ -52,7 +53,7 @@
     "@yarnpkg/pnpify": "^4.0.0-rc.49",
     "@yarnpkg/shell": "^4.0.0-rc.49",
     "ci-info": "^3.8.0",
-    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch",
+    "clipanion": "^4.0.0-rc.2",
     "semver": "^7.5.4",
     "tslib": "^2.6.2",
     "typanion": "^3.14.0",
@@ -71,6 +72,7 @@
   "@yarnpkg/builder": {
     "bundles": {
       "standard": [
+        "@lmpx/yarn-plugin-tsconfig-workspaces",
         "@lmpx/yarn-plugin-workspaces",
         "@lmpx/yarn-plugin-typecheck",
         "@lmpx/yarn-plugin-lib",

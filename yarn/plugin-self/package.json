@@ -11,11 +11,13 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
+  "dependencies": {
+    "clipanion": "^4.0.0-rc.2"
+  },
   "devDependencies": {
     "@yarnpkg/builder": "^4.0.0-rc.49",
     "@yarnpkg/cli": "^4.0.0-rc.49",
-    "@yarnpkg/core": "^4.0.0-rc.49",
-    "clipanion": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch"
+    "@yarnpkg/core": "^4.0.0-rc.49"
   },
   "peerDependencies": {
     "@yarnpkg/cli": "^4.0.0-rc.49",

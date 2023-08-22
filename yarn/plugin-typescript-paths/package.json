@@ -1,0 +1,22 @@
+{
+	"name": "@lmpx/yarn-plugin-tsconfig-workspaces",
+	"version": "1.0.0",
+	"main": "src/index.ts",
+	"dependencies": {
+		"@yarnpkg/builder": "^4.0.0-rc.49",
+		"@yarnpkg/cli": "^4.0.0-rc.49",
+		"@yarnpkg/core": "^4.0.0-rc.49",
+		"@yarnpkg/fslib": "^3.0.0-rc.49",
+		"clipanion": "^4.0.0-rc.2"
+	},
+	"peerDependencies": {
+		"@yarnpkg/cli": "^4.0.0-rc.49",
+		"@yarnpkg/core": "^4.0.0-rc.49",
+		"@yarnpkg/fslib": "^3.0.0-rc.49"
+	},
+	"scripts": {
+		"build": "builder build plugin",
+		"prepack": "yarn run build",
+		"postpack": "rm -rf dist"
+	}
+}

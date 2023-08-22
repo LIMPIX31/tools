@@ -24,5 +24,7 @@
     "eslint": "^8.47.0",
     "clipanion@npm:^4.0.0-rc.2": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch"
   },
-  "tsconfigWorkspaces": true
+  "typescriptWorkspaces": {
+    "enabled": "true"
+  }
 }

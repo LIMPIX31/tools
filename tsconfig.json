@@ -87,11 +87,11 @@
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"
       ],
-      "@lmpx/yarn-plugin-tspace": [
-        "yarn/plugin-tspace"
-      ],
       "@lmpx/yarn-plugin-typecheck": [
         "yarn/plugin-typecheck"
+      ],
+      "@lmpx/yarn-plugin-tsconfig-workspaces": [
+        "yarn/plugin-typescript-paths"
       ],
       "@lmpx/yarn-plugin-workspaces": [
         "yarn/plugin-workspaces"
