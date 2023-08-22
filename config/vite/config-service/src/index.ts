@@ -28,8 +28,8 @@ export default defineConfig(async () => {
 
 	return ({
 		server: {
-			host: options.host ?? '0.0.0.0',
-			port: Number(options.port ?? 80),
+			host: process.env.HOST ?? options.host ?? '0.0.0.0',
+			port: Number(process.env.PORT ?? options.port ?? 80),
 		},
 		plugins: [
 			...node({
