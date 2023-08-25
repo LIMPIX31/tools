@@ -6,26 +6,25 @@ import { globby } from 'globby'
 const privileged = ['react', 'next', 'vite']
 
 export async function loadImportGroups() {
-  const exists = new Set<string>()
+  const exists = new Set()
 
   try {
     const { workspaces } = await readFile(join(process.cwd(), '/package.json'), 'utf8').then(JSON.parse)
 
     if (workspaces?.length > 0) {
-      const folders = await globby(workspaces, {
-        cwd: process.cwd(),
-        onlyDirectories: true,
-        absolute: true,
-        expandDirectories: {
-          files: ['package.json'],
-          extensions: ['json'],
+      const pkgs = await globby(
+        workspaces.map((w) => (w.endsWith('/*') ? w.substring(0, w.length - 2) : w)).map((w) => `${w}/package.json`),
+        {
+          cwd: process.cwd(),
+          onlyFiles: true,
+          absolute: true,
         },
-      })
+      )
 
       await Promise.all(
-        folders.map(async (folder) => {
+        pkgs.map(async (pkg) => {
           try {
-            const { name } = await readFile(join(folder, 'package.json'), 'utf-8').then(JSON.parse)
+            const { name } = await readFile(pkg, 'utf-8').then(JSON.parse)
 
             exists.add(name)
           } catch {
