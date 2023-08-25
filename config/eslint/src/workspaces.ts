@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { join }     from 'node:path'
 
-import { globby } from 'globby'
+import { globby }   from 'globby'
 
 const privileged = ['react', 'next', 'vite']
 

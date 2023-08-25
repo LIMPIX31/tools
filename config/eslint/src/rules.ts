@@ -1,6 +1,10 @@
-import type { Linter } from 'eslint'
+import      { createRequire }    from 'node:module'
 
-import { loadImportGroups } from './workspaces.js'
+import type { Linter }           from 'eslint'
+
+import      { loadImportGroups } from './workspaces.js'
+
+const require = createRequire(import.meta.url)
 
 const rules: Linter.RulesRecord = {
   'simple-import-sort/imports': [
@@ -20,6 +24,7 @@ const rules: Linter.RulesRecord = {
       endOfLine: 'lf',
       printWidth: 120,
       jsxSingleQuote: true,
+      plugins: ['prettier-plugin-layout'].map((plugin) => require.resolve(plugin)),
     },
   ],
   'no-undef': ['off'],
