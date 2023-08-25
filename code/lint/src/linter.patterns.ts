@@ -22,7 +22,7 @@ const ignore = [
   '.terraform',
 ]
 
-const patterns: string[] = ['./**/*.{js,jsx,ts,tsx}']
+const patterns: string[] = ['./**/*.{js,jsx,ts,tsx,mts,cts}']
 
 const ignorePatterns: string[] = [
   '!**/node_modules/**',

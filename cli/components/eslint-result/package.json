@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@lmpx-cli/renderer": "workspace:*",
-    "@types/react": "^18.2.20",
+    "@types/react": "^18.2.21",
     "@yarnpkg/core": "^4.0.0-rc.49",
     "@yarnpkg/fslib": "^3.0.0-rc.49",
     "ink": "^3.2.0",

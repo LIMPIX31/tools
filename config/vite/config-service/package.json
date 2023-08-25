@@ -17,7 +17,7 @@
     "vite-plugin-node": "^3.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.5.2"
+    "@types/node": "^20.5.4"
   },
   "publishConfig": {
     "access": "public",

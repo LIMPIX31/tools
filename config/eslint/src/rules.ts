@@ -1,6 +1,14 @@
 import type { Linter } from 'eslint'
 
+import { loadImportGroups } from './workspaces.js'
+
 const rules: Linter.RulesRecord = {
+  'simple-import-sort/imports': [
+    'error',
+    {
+      groups: await loadImportGroups(),
+    },
+  ],
   'prettier/prettier': [
     'error',
     {
@@ -1166,9 +1174,7 @@ const rules: Linter.RulesRecord = {
   'default-case': ['off'],
   'default-case-last': ['error'],
   'default-param-last': ['off'],
-  'dot-notation': [
-    'off',
-  ],
+  'dot-notation': ['off'],
   eqeqeq: [
     'error',
     'always',
@@ -1335,4 +1341,4 @@ const rules: Linter.RulesRecord = {
   yoda: ['error'],
 }
 
-export default rules
+export { rules }

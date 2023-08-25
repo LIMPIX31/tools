@@ -14,7 +14,7 @@
     "@lmpx-code/worker-utils": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.5.1",
+    "@types/node": "^20.5.4",
     "eslint": "^8.47.0",
     "vite": "^4.4.9"
   }
