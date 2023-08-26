@@ -3,9 +3,7 @@ import { join }     from 'node:path'
 
 import { globby }   from 'globby'
 
-const privileged = ['react', 'next', 'vite']
-
-export async function loadImportGroups() {
+export async function loadWorkspaceRegex() {
   const exists = new Set()
 
   try {
@@ -37,15 +35,5 @@ export async function loadImportGroups() {
     /* ignored */
   }
 
-  const existsArray = Array.from(exists)
-
-  return [
-    ['^\\u0000'],
-    [`^(${privileged.join('|')})`],
-    ['^(child_process|crypto|events|fs|http|https|os|path|module|util|url|stream|events|buffer)', '^node:'],
-    [`^(?!${[...existsArray, ...privileged].join('|')})`],
-    [`^(${existsArray.join('|')})`],
-    ['^'],
-    ['^\\.'],
-  ]
+  return new RegExp(`^(${Array.from(exists).join('|')})(\\/.*)?$`)
 }

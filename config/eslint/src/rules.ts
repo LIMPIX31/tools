@@ -1,16 +1,21 @@
-import      { createRequire }    from 'node:module'
+import      { createRequire }      from 'node:module'
 
-import type { Linter }           from 'eslint'
+import type { Linter }             from 'eslint'
 
-import      { loadImportGroups } from './workspaces.js'
+import      { loadWorkspaceRegex } from './workspaces.js'
+
+const workspaceRegex = await loadWorkspaceRegex()
 
 const require = createRequire(import.meta.url)
 
 const rules: Linter.RulesRecord = {
-  'simple-import-sort/imports': [
+  'layout/import': [
     'error',
     {
-      groups: await loadImportGroups(),
+      matchers: {
+        workspace: (s) => workspaceRegex.test(s),
+      },
+      order: ['privileged', 'node', 'unqualified', 'workspace', 'relative'],
     },
   ],
   'prettier/prettier': [
