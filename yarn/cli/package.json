@@ -78,11 +78,9 @@
     ],
     "bundles": {
       "standard": [
-        "@lmpx/yarn-plugin-lint",
         "@lmpx/yarn-plugin-service",
         "@lmpx/yarn-plugin-tsconfig-workspaces",
         "@lmpx/yarn-plugin-workspaces",
-        "@lmpx/yarn-plugin-typecheck",
         "@lmpx/yarn-plugin-lib",
         "@lmpx/yarn-plugin-self",
         "@yarnpkg/plugin-essentials",
