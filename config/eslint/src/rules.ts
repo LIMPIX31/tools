@@ -8,8 +8,11 @@ const workspaceRegex = await loadWorkspaceRegex()
 
 const require = createRequire(import.meta.url)
 
-const nodeMatcher = /^(child_process|crypto|events|fs|http|https|os|path|module|util|url|stream|events|buffer)(\/.*)?$/
-const privilegedMatcher = /^(react|vite|next|vue)(\/.*)?$/
+const nodeMatcher =
+  // eslint-disable-next-line no-control-regex
+  /^(child_process|crypto|events|fs|http|https|os|path|module|util|url|stream|events|buffer)(\/.*)?\u0000?$/u
+// eslint-disable-next-line no-control-regex
+const privilegedMatcher = /^(react|vite|next|vue)(\/.*)?\u0000?$/
 
 const rules: Linter.RulesRecord = {
   'import-sort/imports': [
