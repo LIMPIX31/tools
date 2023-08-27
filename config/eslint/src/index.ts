@@ -5,7 +5,7 @@ import prettier               from 'eslint-plugin-prettier'
 import react                  from 'eslint-plugin-react'
 import reactHooks             from 'eslint-plugin-react-hooks'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
-import importSort             from 'eslint-plugin-simple-import-sort'
+import importSort             from '@lmpx-fork/eslint-plugin-simple-import-sort'
 
 import { rules }              from './rules.js'
 

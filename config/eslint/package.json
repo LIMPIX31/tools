@@ -1,6 +1,6 @@
 {
   "name": "@lmpx-config/eslint",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "type": "module",
@@ -13,6 +13,7 @@
     "postpack": "rm -rf ./dist"
   },
   "dependencies": {
+    "@lmpx-fork/eslint-plugin-simple-import-sort": "1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "eslint": "^8.47.0",
@@ -23,7 +24,6 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "patch:eslint-plugin-simple-import-sort@npm%3A10.0.0#~/.yarn/patches/eslint-plugin-simple-import-sort-npm-10.0.0-695149a137.patch",
     "globby": "^13.2.2",
     "prettier": "^3.0.2",
     "prettier-plugin-layout": "~0.0.2",
