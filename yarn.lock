@@ -712,12 +712,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@lmpx-config/prettier@workspace:config/prettier":
+"@lmpx-config/prettier@workspace:^, @lmpx-config/prettier@workspace:config/prettier":
   version: 0.0.0-use.local
   resolution: "@lmpx-config/prettier@workspace:config/prettier"
   dependencies:
     "@types/node": "npm:^20.5.4"
     prettier: "npm:^3.0.2"
+    prettier-plugin-layout: "npm:~0.0.2"
   languageName: unknown
   linkType: soft
 
@@ -6654,6 +6655,7 @@ __metadata:
   resolution: "tools@workspace:."
   dependencies:
     "@lmpx-config/eslint": "workspace:^"
+    "@lmpx-config/prettier": "workspace:^"
     "@types/node": "npm:^20.5.4"
     eslint: "npm:^8.47.0"
     husky: "npm:^8.0.3"

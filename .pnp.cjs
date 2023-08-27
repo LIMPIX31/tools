@@ -157,6 +157,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@lmpx-config/eslint", "workspace:config/eslint"],\
+          ["@lmpx-config/prettier", "workspace:config/prettier"],\
           ["@types/node", "npm:20.5.4"],\
           ["eslint", "npm:8.47.0"],\
           ["husky", "npm:8.0.3"],\
@@ -1198,7 +1199,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@lmpx-config/prettier", "workspace:config/prettier"],\
           ["@types/node", "npm:20.5.4"],\
-          ["prettier", "npm:3.0.2"]\
+          ["prettier", "npm:3.0.2"],\
+          ["prettier-plugin-layout", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:0.0.2"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -8638,6 +8640,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["tools", "workspace:."],\
           ["@lmpx-config/eslint", "workspace:config/eslint"],\
+          ["@lmpx-config/prettier", "workspace:config/prettier"],\
           ["@types/node", "npm:20.5.4"],\
           ["eslint", "npm:8.47.0"],\
           ["husky", "npm:8.0.3"],\

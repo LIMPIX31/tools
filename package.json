@@ -16,6 +16,7 @@
   ],
   "devDependencies": {
     "@lmpx-config/eslint": "workspace:^",
+    "@lmpx-config/prettier": "workspace:^",
     "@types/node": "^20.5.4",
     "eslint": "^8.47.0",
     "husky": "^8.0.3",

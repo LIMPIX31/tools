@@ -1,3 +1,7 @@
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+
 export default {
   semi: false,
   singleQuote: true,
@@ -5,5 +9,6 @@ export default {
   jsxSingleQuote: true,
   trailingComma: 'all',
   printWidth: 120,
-  endOfLine: "lf",
+  endOfLine: 'lf',
+  plugins: [require.resolve('prettier-plugin-layout')],
 }
