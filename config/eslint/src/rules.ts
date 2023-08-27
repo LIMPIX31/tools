@@ -8,14 +8,40 @@ const workspaceRegex = await loadWorkspaceRegex()
 
 const require = createRequire(import.meta.url)
 
+const nodeMatcher = /^(child_process|crypto|events|fs|http|https|os|path|module|util|url|stream|events|buffer)(\/.*)?$/
+const privilegedMatcher = /^(react|vite|next|vue)(\/.*)?$/
+
 const rules: Linter.RulesRecord = {
-  'layout/import': [
+  'import-sort/imports': [
     'error',
     {
-      matchers: {
-        workspace: (s) => workspaceRegex.test(s),
-      },
-      order: ['privileged', 'node', 'unqualified', 'workspace', 'relative'],
+      matchers: [
+        {
+          name: 'side',
+          fn: (s) => s.startsWith('\0'),
+        },
+        {
+          name: 'relative',
+          fn: (s) => s.startsWith('.'),
+        },
+        {
+          name: 'node',
+          fn: (s) => s.startsWith('node:') || nodeMatcher.test(s),
+        },
+        {
+          name: 'privileged',
+          fn: (s) => privilegedMatcher.test(s),
+        },
+        {
+          name: 'workspace',
+          fn: (s) => workspaceRegex.test(s),
+        },
+        {
+          name: 'unqualified',
+          fn: () => true,
+        },
+      ],
+      order: ['privileged', 'side', 'node', 'unqualified', 'workspace', 'relative'],
     },
   ],
   'prettier/prettier': [

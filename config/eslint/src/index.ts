@@ -1,11 +1,11 @@
 import typescriptEslint       from '@typescript-eslint/eslint-plugin'
 import parser                 from '@typescript-eslint/parser'
 import jsxA11y                from 'eslint-plugin-jsx-a11y'
-import * as layout            from 'eslint-plugin-layout'
 import prettier               from 'eslint-plugin-prettier'
 import react                  from 'eslint-plugin-react'
 import reactHooks             from 'eslint-plugin-react-hooks'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
+import importSort             from 'eslint-plugin-simple-import-sort'
 
 import { rules }              from './rules.js'
 
@@ -15,7 +15,7 @@ export default [
     rules,
     plugins: {
       prettier,
-      layout,
+      'import-sort': importSort,
       react,
       'jsx-a11y': jsxA11y,
       'react-hooks': reactHooks,
