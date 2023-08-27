@@ -37,6 +37,21 @@ export default defineConfig(async () => {
 				appPath: './src/main.ts',
 				exportName: 'app',
 				tsCompiler: 'swc',
+				swcOptions: {
+					jsc: {
+						target: 'esnext',
+						parser: {
+							decorators: true,
+							dynamicImport: true,
+							syntax: 'typescript',
+						},
+						externalHelpers: true,
+						transform: {
+							decoratorMetadata: true,
+						}
+					},
+					minify: true
+				}
 			}),
 		],
 		optimizeDeps: {

@@ -20,6 +20,7 @@ export const plugin: Plugin = {
 
 			await report.startTimerPromise('Sync workspaces', async () => {
 				const tspacePath = ppath.join(project.cwd, 'tsconfig.json')
+				const swcrcPath = ppath.join(project.cwd, '.swcrc')
 
 				if (!(await xfs.existsPromise(tspacePath))) {
 					return
@@ -88,6 +89,19 @@ export const plugin: Plugin = {
 					})
 
 					await xfs.writeFilePromise(tspacePath, `${JSON.stringify(tsworkspaces, null, 2)}\n`)
+
+					try {
+						if (await xfs.existsPromise(swcrcPath)) {
+							const swcrc = await xfs.readFilePromise(swcrcPath, 'utf8').then(JSON.parse)
+
+							swcrc.jsc.paths = paths
+
+							await xfs.writeFilePromise(swcrcPath, `${JSON.stringify(swcrc, null, 2)}\n`)
+						}
+					} catch (e) {
+						report.reportError(MessageName.UNNAMED, `Invalid swcrc. Cause: ${e.message}`)
+					}
+
 				} catch (e: any) {
 					report.reportError(
 						MessageName.UNNAMED,
