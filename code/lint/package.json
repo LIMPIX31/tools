@@ -5,12 +5,12 @@
   "main": "src/index.ts",
   "dependencies": {
     "@lmpx-config/eslint": "workspace:*",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "globby": "^13.2.2",
     "ignore": "^5.2.4"
   },
   "devDependencies": {
-    "@types/node": "^20.5.4"
+    "@types/node": "^20.5.7"
   },
   "peerDependencies": {
     "react": "*",

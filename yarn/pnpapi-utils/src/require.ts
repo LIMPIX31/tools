@@ -2,7 +2,7 @@ import type { Configuration, Report } from '@yarnpkg/core'
 import { formatUtils, MessageName, structUtils } from '@yarnpkg/core'
 import { resolveRequest } from '@lmpx-code/pnpapi-worker'
 
-export async function requireAndReport<const T extends string>(configuration: Configuration, report: Report, idents: T[], issuer = process.cwd()) {
+export async function requireAndReport<T extends string>(configuration: Configuration, report: Report, idents: T[], issuer = process.cwd()) {
 	const failed: string[] = []
 
 	const result = await Promise.all(idents.map(async (ident) => {

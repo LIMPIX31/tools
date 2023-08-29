@@ -17,7 +17,7 @@
     "prettier-plugin-layout": "~0.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.5.4"
+    "@types/node": "^20.5.7"
   },
   "publishConfig": {
     "access": "public",
