@@ -68,7 +68,7 @@ export const plugin: Plugin = {
 									added.push(stringifiedName)
 								}
 
-								customs.forEach(([sub, path]) => {
+								customs.filter(([sub]) => sub !== '.').forEach(([sub, path]) => {
 									const exportsName = `${stringifiedName}/${sub.replaceAll('./', '')}`
 									paths[exportsName] = [ppath.join(relativeCwd, path as any)]
 								})
