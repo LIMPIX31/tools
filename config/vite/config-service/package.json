@@ -1,6 +1,6 @@
 {
   "name": "@lmpx-config/vite-service",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "version": "0.0.4",
   "type": "module",
   "files": [

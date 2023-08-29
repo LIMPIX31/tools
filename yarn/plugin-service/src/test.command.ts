@@ -3,7 +3,7 @@ import { Configuration, Project, StreamReport } from '@yarnpkg/core'
 import { requireAndReport } from '@lmpx/yarn-pnpapi-utils'
 
 export class TestCommand extends BaseCommand {
-	static paths = [['test']]
+	static paths = [['service', 'test']]
 
 	async execute() {
 		const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
