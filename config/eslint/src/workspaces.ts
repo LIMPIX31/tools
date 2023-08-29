@@ -35,5 +35,5 @@ export async function loadWorkspaceRegex() {
     /* ignored */
   }
 
-  return new RegExp(`^(${Array.from(exists).join('|')})(\\/.*)?\u0000?$`)
+  return new RegExp(`^(${Array.from(exists).join('|')})(/.*)?\u0000?$`)
 }
