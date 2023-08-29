@@ -3,6 +3,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@lmpx-code/pnpapi-worker": "workspace:^",
+    "@lmpx/yarn-pnpapi-utils": "workspace:^",
     "clipanion": "^4.0.0-rc.2"
   },
   "devDependencies": {

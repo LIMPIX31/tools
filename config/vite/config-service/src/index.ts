@@ -1,8 +1,9 @@
-import { defineConfig, createLogger } from 'vite'
-import { VitePluginNode as node } from 'vite-plugin-node'
+import { createLogger, defineConfig } from 'vite'
 import { join } from 'node:path'
 import { existsSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
+import { Options, transform } from '@swc/core'
+import deepmerge from 'deepmerge'
 
 export default defineConfig(async () => {
 	const logger = createLogger()
@@ -26,38 +27,60 @@ export default defineConfig(async () => {
 
 	const options = packageJson['service'] ?? {}
 
+	const swcOptions = options['swc'] ?? {}
+	const testOptions = options['test'] ?? {}
+
 	return ({
-		server: {
-			host: process.env.HOST ?? options.host ?? '0.0.0.0',
-			port: Number(process.env.PORT ?? options.port ?? 80),
-		},
-		plugins: [
-			...node({
-				adapter: 'nest',
-				appPath: './src/main.ts',
-				exportName: 'app',
-				tsCompiler: 'swc',
-				swcOptions: {
-					jsc: {
-						target: 'esnext',
-						parser: {
-							decorators: true,
-							dynamicImport: true,
-							syntax: 'typescript',
+		test: deepmerge(
+			{
+				globals: true,
+				root: process.cwd(),
+				include: [
+					'integration/**/*.{test,spec}.?(c|m)[jt]s?(x)',
+					'__tests__**/*.{test,spec}.?(c|m)[jt]s?(x)',
+					'tests/**/*.{test,spec}.?(c|m)[jt]s?(x)',
+					'unit/**/*.{test,spec}.?(c|m)[jt]s?(x)'
+				],
+				includeSource: ['**/*.?(c|m)[jt]s?(x)']
+			},
+			testOptions
+		),
+
+		plugins: [{
+			name: 'swc',
+
+			enforce: 'pre',
+
+			async transform(code, id) {
+				const result = await transform(code, deepmerge(
+					{
+						filename: id,
+						sourceMaps: true,
+						module: {
+							type: 'nodenext',
 						},
-						externalHelpers: true,
-						transform: {
-							decoratorMetadata: true,
-						}
+						jsc: {
+							parser: {
+								syntax: 'typescript',
+								decorators: true,
+								dynamicImport: true,
+							},
+							transform: {
+								decoratorMetadata: true,
+							},
+							target: 'esnext',
+						},
+						minify: false,
 					},
-					minify: true
+					swcOptions,
+				) as Options)
+
+				return {
+					code: result.code,
+					map: result.map && JSON.parse(result.map),
 				}
-			}),
-		],
-		optimizeDeps: {
-			exclude: options.exclude ?? ['@nestjs/websockets', '@nestjs/microservices', 'class-transformer', '@apollo/subgraph'],
-			include: options.include ?? ['./src/main.ts'],
-		},
-		envPrefix: 'SERVICE',
+			},
+		}],
+		esbuild: false,
 	})
 })

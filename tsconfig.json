@@ -108,6 +108,9 @@
       "@lmpx/yarn-plugin-workspaces": [
         "yarn/plugin-workspaces"
       ],
+      "@lmpx/yarn-pnpapi-utils": [
+        "yarn/pnpapi-utils"
+      ],
       "@lmpx/yarn-workspace-utils": [
         "yarn/workspace-utils"
       ]

@@ -1,9 +1,12 @@
 import { BaseCommand } from '@yarnpkg/cli'
-import { Configuration, formatUtils, MessageName, Project, StreamReport, structUtils } from '@yarnpkg/core'
-import { resolveRequest } from '@lmpx-code/pnpapi-worker'
+import { Configuration, Project, StreamReport } from '@yarnpkg/core'
+import { Option } from 'clipanion'
+import { requireAndReport } from '@lmpx/yarn-pnpapi-utils'
 
 export class ServiceDevCommand extends BaseCommand {
 	static paths = [['service', 'dev']]
+
+	entry = Option.String({ required: false })
 
 	async execute() {
 		const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
@@ -16,20 +19,18 @@ export class ServiceDevCommand extends BaseCommand {
 			},
 			async (report) => {
 				await report.startTimerPromise('Service', async () => {
-					try {
-						const file = await resolveRequest('@lmpx-config/vite-service', this.context.cwd)
+					const [allow, packages] = await requireAndReport(
+						configuration,
+						report,
+						['@lmpx-config/vite-service', 'vite-node'],
+						this.context.cwd
+					)
 
-						if (!file) {
-							throw new Error('File is null')
-						}
-
-						await this.cli.run(['vite', '-c', file, 'dev'])
-					} catch (e) {
-						report.reportError(
-							MessageName.UNNAMED,
-							`No configuration package found: ${formatUtils.pretty(configuration, structUtils.parseIdent('@lmpx-config/vite-service'), 'IDENT')} `
-						)
+					if (!allow) {
+						return
 					}
+
+					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', this.entry ?? './src/main.ts'])
 				})
 			})
 
