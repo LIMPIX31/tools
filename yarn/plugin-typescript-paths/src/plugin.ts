@@ -1,5 +1,6 @@
 import type { Plugin, Project } from '@yarnpkg/core'
 import { formatUtils, MessageName, structUtils } from '@yarnpkg/core'
+// @ts-expect-error
 import type { InstallOptions } from '@yarnpkg/core/lib/Project'
 import { ppath, xfs } from '@yarnpkg/fslib'
 

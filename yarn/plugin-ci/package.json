@@ -8,7 +8,7 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@actions/core": "^1.10.0",
+    "@actions/core": "^1.10.1",
     "@actions/github": "^5.1.1",
     "@babel/code-frame": "^7.22.13",
     "@lmpx-cli/renderer": "workspace:*",
@@ -22,17 +22,17 @@
     "@lmpx-cli/eslint-result-component": "workspace:*",
     "@lmpx-cli/renderer": "workspace:*",
     "@lmpx-code/lint-worker": "workspace:*",
-    "@octokit/types": "^11.1.0",
-    "@types/node": "^20.5.7",
-    "@yarnpkg/builder": "^4.0.0-rc.50",
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50",
-    "eslint": "^8.48.0"
+    "@octokit/types": "^12.0.0",
+    "@types/node": "^20.7.1",
+    "@yarnpkg/builder": "^4.0.0-rc.51",
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51",
+    "eslint": "^8.50.0"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50"
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51"
   }
 }

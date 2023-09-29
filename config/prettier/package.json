@@ -13,11 +13,11 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "prettier": "^3.0.2",
+    "prettier": "^3.0.3",
     "prettier-plugin-layout": "~0.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.5.7"
+    "@types/node": "^20.7.1"
   },
   "publishConfig": {
     "access": "public",

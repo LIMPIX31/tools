@@ -13,18 +13,18 @@
     "@lmpx-code/typescript-worker": "workspace:*",
     "clipanion": "^4.0.0-rc.2",
     "react": "^18.2.0",
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.50",
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50"
+    "@yarnpkg/builder": "^4.0.0-rc.51",
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50"
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51"
   }
 }

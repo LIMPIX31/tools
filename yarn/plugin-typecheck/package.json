@@ -19,16 +19,16 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.21",
-    "@yarnpkg/builder": "^4.0.0-rc.50",
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50",
+    "@types/react": "^18.2.23",
+    "@yarnpkg/builder": "^4.0.0-rc.51",
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51",
     "typescript": "~5.2.2"
   },
   "peerDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.50",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50"
+    "@yarnpkg/cli": "^4.0.0-rc.51",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51"
   }
 }

@@ -8,10 +8,10 @@
     "dist"
   ],
   "devDependencies": {
-    "@yarnpkg/core": "^4.0.0-rc.50"
+    "@yarnpkg/core": "^4.0.0-rc.51"
   },
   "peerDependencies": {
-    "@yarnpkg/core": "^4.0.0-rc.50"
+    "@yarnpkg/core": "^4.0.0-rc.51"
   },
   "publishConfig": {
     "access": "public",

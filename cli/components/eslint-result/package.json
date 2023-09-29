@@ -5,20 +5,20 @@
   "main": "src/index.ts",
   "dependencies": {
     "@lmpx-cli/source-frame-component": "workspace:*",
-    "@types/eslint": "^8.44.2"
+    "@types/eslint": "^8.44.3"
   },
   "devDependencies": {
     "@lmpx-cli/renderer": "workspace:*",
-    "@types/react": "^18.2.21",
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50",
+    "@types/react": "^18.2.23",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51",
     "ink": "^3.2.0",
     "react": "^18.2.0",
     "strip-ansi": "^7.1.0"
   },
   "peerDependencies": {
-    "@yarnpkg/core": "^4.0.0-rc.50",
-    "@yarnpkg/fslib": "^3.0.0-rc.50",
+    "@yarnpkg/core": "^4.0.0-rc.51",
+    "@yarnpkg/fslib": "^3.0.0-rc.51",
     "ink": "^3.2.0",
     "react": "18"
   }
