@@ -863,7 +863,7 @@ const rules: Linter.RulesRecord = {
     },
   ],
   'prefer-destructuring': [
-    'error',
+    'off',
     {
       VariableDeclarator: {
         array: false,
@@ -1351,7 +1351,7 @@ const rules: Linter.RulesRecord = {
   'no-useless-concat': ['error'],
   'no-useless-escape': ['error'],
   'no-useless-return': ['error'],
-  'no-void': ['error'],
+  'no-void': ['off'],
   'no-warning-comments': [
     'off',
     {
