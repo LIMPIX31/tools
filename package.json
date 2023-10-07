@@ -15,14 +15,14 @@
     "eslint/**/*"
   ],
   "devDependencies": {
-    "@lmpx-config/eslint": "0.0.17",
+    "@lmpx-config/eslint": "0.0.18",
     "@lmpx-config/prettier": "0.0.2",
-    "@types/node": "^20.7.1",
-    "eslint": "^8.50.0",
+    "@types/node": "^20.8.3",
+    "eslint": "^8.51.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "typescript": "5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.11"
   },
   "resolutions": {
     "typescript": "^5.2.2",

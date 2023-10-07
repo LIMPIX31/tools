@@ -33,38 +33,8 @@
       "node"
     ],
     "paths": {
-      "@lmpx-cli/error-info-component": [
-        "cli/components/error-info"
-      ],
-      "@lmpx-cli/eslint-result-component": [
-        "cli/components/eslint-result"
-      ],
-      "@lmpx-cli/source-frame-component": [
-        "cli/components/source-frame"
-      ],
-      "@lmpx-cli/stack-trace-component": [
-        "cli/components/stack-trace"
-      ],
-      "@lmpx-cli/typescript-diagnostic-component": [
-        "cli/components/typescript-diagnostic"
-      ],
-      "@lmpx-cli/renderer": [
-        "cli/renderer"
-      ],
-      "@lmpx-code/lint": [
-        "code/lint"
-      ],
-      "@lmpx-code/lint-worker": [
-        "code/lint-worker"
-      ],
       "@lmpx-code/pnpapi-worker": [
         "code/pnpapi-worker"
-      ],
-      "@lmpx-code/typescript": [
-        "code/typescript"
-      ],
-      "@lmpx-code/typescript-worker": [
-        "code/typescript-worker"
       ],
       "@lmpx-code/worker-utils": [
         "code/worker-utils"
@@ -81,26 +51,14 @@
       "@lmpx/yarn-cli": [
         "yarn/cli"
       ],
-      "@lmpx/yarn-plugin-ci": [
-        "yarn/plugin-ci"
-      ],
       "@lmpx/yarn-plugin-files": [
         "yarn/plugin-files"
-      ],
-      "@lmpx/yarn-plugin-lib": [
-        "yarn/plugin-lib"
-      ],
-      "@lmpx/yarn-plugin-lint": [
-        "yarn/plugin-lint"
       ],
       "@lmpx/yarn-plugin-self": [
         "yarn/plugin-self"
       ],
       "@lmpx/yarn-plugin-service": [
         "yarn/plugin-service"
-      ],
-      "@lmpx/yarn-plugin-typecheck": [
-        "yarn/plugin-typecheck"
       ],
       "@lmpx/yarn-plugin-tsconfig-workspaces": [
         "yarn/plugin-typescript-paths"
