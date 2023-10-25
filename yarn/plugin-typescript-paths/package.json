@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"main": "src/index.ts",
 	"dependencies": {
-		"@yarnpkg/builder": "^4.0.0-rc.53",
-		"@yarnpkg/cli": "^4.0.0-rc.53",
-		"@yarnpkg/core": "^4.0.0-rc.53",
-		"@yarnpkg/fslib": "^3.0.0-rc.53",
+		"@yarnpkg/builder": "^4.0.0",
+		"@yarnpkg/cli": "^4.0.0",
+		"@yarnpkg/core": "^4.0.0",
+		"@yarnpkg/fslib": "^3.0.0",
 		"clipanion": "^4.0.0-rc.2"
 	},
 	"peerDependencies": {

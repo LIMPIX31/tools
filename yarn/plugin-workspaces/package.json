@@ -18,9 +18,9 @@
     "clipanion": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@yarnpkg/builder": "^4.0.0-rc.53",
-    "@yarnpkg/cli": "^4.0.0-rc.53",
-    "@yarnpkg/core": "^4.0.0-rc.53",
+    "@yarnpkg/builder": "^4.0.0",
+    "@yarnpkg/cli": "^4.0.0",
+    "@yarnpkg/core": "^4.0.0",
     "typescript": "~5.2.2"
   },
   "peerDependencies": {

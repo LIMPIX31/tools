@@ -7,8 +7,8 @@
     "clipanion": "^4.0.0-rc.2"
   },
   "devDependencies": {
-    "@yarnpkg/cli": "^4.0.0-rc.53",
-    "@yarnpkg/core": "^4.0.0-rc.53",
+    "@yarnpkg/cli": "^4.0.0",
+    "@yarnpkg/core": "^4.0.0",
     "tslib": "^2.6.2"
   },
   "peerDependencies": {

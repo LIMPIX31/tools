@@ -5,7 +5,7 @@
     "@lmpx-code/pnpapi-worker": "workspace:^"
   },
   "devDependencies": {
-    "@yarnpkg/core": "^4.0.0-rc.53",
+    "@yarnpkg/core": "^4.0.0",
     "tslib": "^2.6.2"
   },
   "peerDependencies": {
