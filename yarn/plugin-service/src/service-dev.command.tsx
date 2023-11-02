@@ -8,6 +8,8 @@ export class ServiceDevCommand extends BaseCommand {
 
 	rest = Option.Rest()
 
+	inspect = Option.String('--inspect', { tolerateBoolean: true })
+
 	async execute() {
 		const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
 		const { project } = await Project.find(configuration, this.context.cwd)
@@ -30,7 +32,11 @@ export class ServiceDevCommand extends BaseCommand {
 						return
 					}
 
-					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', ...this.rest])
+					const inspection = this.inspect !== undefined ? typeof this.inspect === 'boolean' ? ['--inspect'] : [`--inspect=${this.inspect}`] : []
+
+					const args = ['run', ...inspection, 'vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', ...this.rest]
+
+					await this.cli.run(args)
 				})
 			})
 
