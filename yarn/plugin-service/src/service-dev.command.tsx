@@ -8,6 +8,8 @@ export class ServiceDevCommand extends BaseCommand {
 
 	entry = Option.String({ required: false })
 
+	rest = Option.Rest()
+
 	async execute() {
 		const configuration = await Configuration.find(this.context.cwd, this.context.plugins)
 		const { project } = await Project.find(configuration, this.context.cwd)
@@ -23,14 +25,14 @@ export class ServiceDevCommand extends BaseCommand {
 						configuration,
 						report,
 						['@lmpx-config/vite-service', 'vite-node'],
-						this.context.cwd
+						this.context.cwd,
 					)
 
 					if (!allow) {
 						return
 					}
 
-					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', this.entry ?? './src/main.ts'])
+					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', this.entry ?? './src/main.ts', ...this.rest])
 				})
 			})
 
