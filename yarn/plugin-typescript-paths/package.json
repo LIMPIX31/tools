@@ -4,9 +4,9 @@
 	"main": "src/index.ts",
 	"dependencies": {
 		"@yarnpkg/builder": "^4.0.0",
-		"@yarnpkg/cli": "^4.0.0",
-		"@yarnpkg/core": "^4.0.0",
-		"@yarnpkg/fslib": "^3.0.0",
+		"@yarnpkg/cli": "^4.0.1",
+		"@yarnpkg/core": "^4.0.1",
+		"@yarnpkg/fslib": "^3.0.1",
 		"clipanion": "^4.0.0-rc.2"
 	},
 	"peerDependencies": {

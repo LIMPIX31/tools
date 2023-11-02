@@ -17,7 +17,7 @@
   "devDependencies": {
     "@lmpx-config/eslint": "0.0.18",
     "@lmpx-config/prettier": "0.0.2",
-    "@types/node": "^20.8.8",
+    "@types/node": "^20.8.10",
     "eslint": "^8.52.0",
     "husky": "^8.0.3",
     "prettier": "^3.0.3",

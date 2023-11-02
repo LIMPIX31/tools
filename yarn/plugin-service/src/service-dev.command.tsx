@@ -6,8 +6,6 @@ import { requireAndReport } from '@lmpx/yarn-pnpapi-utils'
 export class ServiceDevCommand extends BaseCommand {
 	static paths = [['service', 'dev']]
 
-	entry = Option.String({ required: false })
-
 	rest = Option.Rest()
 
 	async execute() {
@@ -32,7 +30,7 @@ export class ServiceDevCommand extends BaseCommand {
 						return
 					}
 
-					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', this.entry ?? './src/main.ts', ...this.rest])
+					await this.cli.run(['vite-node', '-c', packages['@lmpx-config/vite-service'], '-w', ...this.rest])
 				})
 			})
 
