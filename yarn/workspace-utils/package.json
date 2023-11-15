@@ -8,7 +8,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@yarnpkg/core": "^4.0.1"
+    "@yarnpkg/core": "^4.0.2"
   },
   "peerDependencies": {
     "@yarnpkg/core": "^4.0.0-rc.53"
