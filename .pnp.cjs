@@ -744,7 +744,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./config/eslint/",\
         "packageDependencies": [\
           ["@lmpx-config/eslint", "workspace:config/eslint"],\
-          ["@lmpx-fork/eslint-plugin-simple-import-sort", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.1"],\
+          ["@lmpx-fork/eslint-plugin-simple-import-sort", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.2"],\
           ["@swc/cli", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:0.1.63"],\
           ["@swc/core", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.3.100"],\
           ["@types/eslint", "npm:8.44.8"],\
@@ -803,19 +803,20 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:1.0.1", {\
-        "packageLocation": "./.yarn/cache/@lmpx-fork-eslint-plugin-simple-import-sort-npm-1.0.1-b9810a285a-ea9162e750.zip/node_modules/@lmpx-fork/eslint-plugin-simple-import-sort/",\
+      ["npm:1.0.2", {\
+        "packageLocation": "./.yarn/cache/@lmpx-fork-eslint-plugin-simple-import-sort-npm-1.0.2-918db2fb96-86007d3093.zip/node_modules/@lmpx-fork/eslint-plugin-simple-import-sort/",\
         "packageDependencies": [\
-          ["@lmpx-fork/eslint-plugin-simple-import-sort", "npm:1.0.1"]\
+          ["@lmpx-fork/eslint-plugin-simple-import-sort", "npm:1.0.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@lmpx-fork-eslint-plugin-simple-import-sort-virtual-83d12d2560/0/cache/@lmpx-fork-eslint-plugin-simple-import-sort-npm-1.0.1-b9810a285a-ea9162e750.zip/node_modules/@lmpx-fork/eslint-plugin-simple-import-sort/",\
+      ["virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/@lmpx-fork-eslint-plugin-simple-import-sort-virtual-2885f69ef1/0/cache/@lmpx-fork-eslint-plugin-simple-import-sort-npm-1.0.2-918db2fb96-86007d3093.zip/node_modules/@lmpx-fork/eslint-plugin-simple-import-sort/",\
         "packageDependencies": [\
-          ["@lmpx-fork/eslint-plugin-simple-import-sort", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.1"],\
+          ["@lmpx-fork/eslint-plugin-simple-import-sort", "virtual:2ae85e4935c87e53a57cf061a09511f16b65658c23c2b88502ae88b241d0085917abe3e846b34fdfe8650d8768e22c3b1fa2a10ae999186235b21cd343d90b3d#npm:1.0.2"],\
           ["@types/eslint", "npm:8.44.8"],\
-          ["eslint", "npm:8.51.0"]\
+          ["eslint", "npm:8.51.0"],\
+          ["globby", "npm:14.0.0"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
