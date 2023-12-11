@@ -1,52 +1,10 @@
-import      { createRequire }      from 'node:module'
-
-import type { Linter }             from 'eslint'
-
-import      { loadWorkspaceRegex } from './workspaces.js'
-
-const workspaceRegex = await loadWorkspaceRegex()
+import type { Linter } from 'eslint'
+import { createRequire } from 'node:module'
 
 const require = createRequire(import.meta.url)
 
-const nodeMatcher =
-  // eslint-disable-next-line no-control-regex
-  /^(child_process|crypto|events|fs|http|https|os|path|module|util|url|stream|events|buffer)(\/.*)?\u0000?$/u
-// eslint-disable-next-line no-control-regex
-const privilegedMatcher = /^(react|vite|next|vue)(\/.*)?\u0000?$/
-
 const rules: Linter.RulesRecord = {
-  'import-sort/imports': [
-    'error',
-    {
-      matchers: [
-        {
-          name: 'side',
-          fn: (s) => s.startsWith('\0'),
-        },
-        {
-          name: 'relative',
-          fn: (s) => s.startsWith('.'),
-        },
-        {
-          name: 'node',
-          fn: (s) => s.startsWith('node:') || nodeMatcher.test(s),
-        },
-        {
-          name: 'privileged',
-          fn: (s) => privilegedMatcher.test(s),
-        },
-        {
-          name: 'workspace',
-          fn: (s) => workspaceRegex.test(s),
-        },
-        {
-          name: 'unqualified',
-          fn: () => true,
-        },
-      ],
-      order: ['privileged', 'side', 'node', 'unqualified', 'workspace', 'relative'],
-    },
-  ],
+  'import-sort/imports': ['error'],
   'prettier/prettier': [
     'error',
     {
@@ -813,7 +771,7 @@ const rules: Linter.RulesRecord = {
   'constructor-super': ['error'],
   'no-class-assign': ['error'],
   'no-const-assign': ['error'],
-  'no-dupe-class-members': ['error'],
+  'no-dupe-class-members': ['off'],
   'no-duplicate-imports': ['off'],
   'no-new-symbol': ['error'],
   'no-restricted-exports': [
@@ -1209,7 +1167,7 @@ const rules: Linter.RulesRecord = {
   ],
   'block-scoped-var': ['error'],
   complexity: ['off', 20],
-  'consistent-return': ['error'],
+  'consistent-return': ['off'],
   'default-case': ['off'],
   'default-case-last': ['error'],
   'default-param-last': ['off'],

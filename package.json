@@ -17,15 +17,15 @@
   "devDependencies": {
     "@lmpx-config/eslint": "0.0.18",
     "@lmpx-config/prettier": "0.0.2",
-    "@types/node": "^20.9.0",
-    "eslint": "^8.53.0",
+    "@types/node": "^20.10.4",
+    "eslint": "^8.55.0",
     "husky": "^8.0.3",
-    "prettier": "^3.1.0",
-    "typescript": "5.2.2",
-    "vite": "^4.5.0"
+    "prettier": "^3.1.1",
+    "typescript": "5.3.3",
+    "vite": "^5.0.7"
   },
   "resolutions": {
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.3",
     "eslint": "^8.47.0",
     "clipanion@npm:^4.0.0-rc.2": "patch:clipanion@npm%3A4.0.0-rc.2#~/.yarn/patches/clipanion-npm-4.0.0-rc.2-ad27d804c4.patch"
   },
